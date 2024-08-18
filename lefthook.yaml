@@ -1,0 +1,21 @@
+pre-commit:
+  parallel: true
+  commands:
+    sql-format:
+      tags: sql format
+      root: db
+      glob: '*.sql'
+      run: sqlfluff fix ./migrations
+      stage_fixed: true
+
+pre-push:
+  parallel: true
+  commands:
+    check-branch-name:
+      tags: branch
+      run: |
+        bash -c "if [[ ! $(git symbolic-ref --short HEAD) =~ ^[a-zA-Z0-9]+([_\-][a-zA-Z0-9]+)*$ ]];
+        then
+          echo 'The branch name should only contain characters (a-zA-Z), digits (0-9), hyphen (-) and underscore (_).';
+          exit 1;
+        fi"
