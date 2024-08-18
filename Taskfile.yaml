@@ -14,3 +14,10 @@ tasks:
     # desc: Show commands
     cmds:
       - task -l --sort none
+
+  init:
+    desc: Initialize the project
+    cmds:
+      - cp .env.example .env && direnv allow
+      - lefthook install
+      - task docker:up && task db:migrate
