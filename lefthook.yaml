@@ -1,6 +1,11 @@
 pre-commit:
   parallel: true
   commands:
+    server-format:
+      tags: server format
+      root: server
+      run: ./gradlew detekt
+      stage_fixed: true
     sql-format:
       tags: sql format
       root: db
