@@ -1,0 +1,12 @@
+version: '3'
+
+tasks:
+  up:
+    desc: Create and start containers in the background
+    cmds:
+      - docker compose up -d
+
+  down:
+    desc: Stop and remove containers, networks
+    cmds:
+      - docker compose down

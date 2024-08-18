@@ -6,6 +6,9 @@ includes:
   db:
     taskfile: .task/Taskfile.db.yaml
 
+  docker:
+    taskfile: .task/Taskfile.docker.yaml
+
 tasks:
   default:
     # desc: Show commands
