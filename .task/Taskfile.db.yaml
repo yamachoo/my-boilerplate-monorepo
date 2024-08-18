@@ -1,0 +1,24 @@
+version: '3'
+
+tasks:
+  new:
+    desc: >
+      Generate a new migration file.
+      Usage: task db:new  -- [arguments]
+    cmds:
+      - dbmate new {{.CLI_ARGS}}
+
+  migrate:
+    desc: Run any pending migrations
+    cmds:
+      - dbmate --wait-timeout=5s migrate
+
+  rollback:
+    desc: Roll back the most recent migration
+    cmds:
+      - dbmate --wait-timeout=5s rollback
+
+  status:
+    desc: Show the status of all migrations
+    cmds:
+      - dbmate --wait-timeout=5s status
