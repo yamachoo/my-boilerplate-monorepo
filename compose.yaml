@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - type: bind
+        source: ./containers/mysql/conf.d
+        target: /etc/mysql/conf.d
+      - mysql_data:/var/lib/mysql
+      - mysql_log:/var/log/mysql
+    ports:
+      - ${DB_PORT}:3306
+
+volumes:
+  mysql_data:
+  mysql_log:
