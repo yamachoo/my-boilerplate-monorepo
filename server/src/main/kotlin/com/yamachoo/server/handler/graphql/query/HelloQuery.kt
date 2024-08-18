@@ -1,4 +1,4 @@
-package com.yamachoo.server.graphql
+package com.yamachoo.server.handler.graphql.query
 
 import com.expediagroup.graphql.server.operations.Query
 import jakarta.validation.constraints.Size

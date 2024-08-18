@@ -4,4 +4,4 @@ spring:
 
 graphql:
   packages:
-    - com.yamachoo.server.graphql
+    - com.yamachoo.server.handler.graphql
