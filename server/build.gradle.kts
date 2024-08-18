@@ -22,6 +22,7 @@ repositories {
 
 dependencies {
     implementation("com.expediagroup:graphql-kotlin-spring-server:7.1.4")
+    implementation("com.graphql-java:graphql-java-extended-scalars:22.0")
     implementation("org.springframework.boot:spring-boot-starter-validation")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
