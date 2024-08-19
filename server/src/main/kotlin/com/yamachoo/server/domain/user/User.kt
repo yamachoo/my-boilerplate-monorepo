@@ -7,4 +7,13 @@ data class User(
     val name: String,
     val email: String,
     val createdAt: OffsetDateTime,
-)
+) {
+    companion object {
+        operator fun invoke(user: DraftUser) = User(
+            id = user.id,
+            name = user.name,
+            email = user.email,
+            createdAt = user.createdAt,
+        )
+    }
+}

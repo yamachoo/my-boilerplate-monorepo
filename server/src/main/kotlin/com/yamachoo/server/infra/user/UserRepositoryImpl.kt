@@ -7,7 +7,6 @@ import org.komapper.core.dsl.Meta
 import org.komapper.core.dsl.QueryDsl
 import org.komapper.r2dbc.R2dbcDatabase
 import org.springframework.stereotype.Repository
-import java.time.OffsetDateTime
 
 @Repository
 class UserRepositoryImpl(
@@ -17,14 +16,7 @@ class UserRepositoryImpl(
         return db.withTransaction {
             db.runQuery {
                 val u = Meta.user
-                QueryDsl.insert(u).single(
-                    User(
-                        id = 0,
-                        name = user.name,
-                        email = user.email,
-                        createdAt = OffsetDateTime.MIN,
-                    )
-                )
+                QueryDsl.insert(u).single(User(user))
             }
         }
     }
