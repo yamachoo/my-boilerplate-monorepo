@@ -1,6 +1,8 @@
 spring:
   application:
     name: server
+  r2dbc:
+    url: ${R2DBC_URL}
 
 graphql:
   packages:
