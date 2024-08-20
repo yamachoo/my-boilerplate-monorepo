@@ -1,14 +1,14 @@
 import com.google.cloud.tools.jib.gradle.JibTask
 
 plugins {
-    kotlin("jvm") version "1.9.23"
-    kotlin("plugin.spring") version "1.9.23"
-    id("org.springframework.boot") version "3.3.2"
-    id("io.spring.dependency-management") version "1.1.6"
-    id("com.expediagroup.graphql") version "7.1.4"
-    id("com.google.devtools.ksp") version "1.9.23-1.0.19"
-    id("io.gitlab.arturbosch.detekt") version "1.23.6"
-    id("com.google.cloud.tools.jib") version "3.4.3"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.spring)
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
+    alias(libs.plugins.graphql.kotlin)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.detekt)
+    alias(libs.plugins.jib)
 }
 
 group = "com.yamachoo"
@@ -25,21 +25,21 @@ repositories {
 }
 
 dependencies {
-    implementation("com.expediagroup:graphql-kotlin-spring-server:7.1.4")
-    implementation("com.graphql-java:graphql-java-extended-scalars:22.0")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation(libs.graphql.kotlin.spring.server)
+    implementation(libs.graphql.java.extended.scalars)
+    implementation(libs.spring.boot.starter.validation)
 
-    platform("org.komapper:komapper-platform:2.2.0").let {
+    platform(libs.komapper.platform).let {
         implementation(it)
         ksp(it)
     }
-    implementation("org.komapper:komapper-spring-boot-starter-r2dbc")
-    implementation("org.komapper:komapper-dialect-mysql-r2dbc")
-    ksp("org.komapper:komapper-processor")
+    implementation(libs.komapper.spring.boot.starter.r2dbc)
+    implementation(libs.komapper.dialect.mysql.r2dbc)
+    ksp(libs.komapper.processor)
 
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
+    developmentOnly(libs.spring.boot.devtools)
 
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.6")
+    detektPlugins(libs.detekt.formatting)
 }
 
 kotlin {
