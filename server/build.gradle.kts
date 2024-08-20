@@ -1,3 +1,5 @@
+import com.google.cloud.tools.jib.gradle.JibTask
+
 plugins {
     kotlin("jvm") version "1.9.23"
     kotlin("plugin.spring") version "1.9.23"
@@ -6,6 +8,7 @@ plugins {
     id("com.expediagroup.graphql") version "7.1.4"
     id("com.google.devtools.ksp") version "1.9.23-1.0.19"
     id("io.gitlab.arturbosch.detekt") version "1.23.6"
+    id("com.google.cloud.tools.jib") version "3.4.3"
 }
 
 group = "com.yamachoo"
@@ -58,4 +61,25 @@ detekt {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+jib {
+    from {
+        platforms {
+            platform {
+                architecture = "arm64"
+                os = "linux"
+            }
+        }
+    }
+    to {
+        image = project.name
+    }
+    container {
+        user = "1100:1100"
+    }
+}
+
+tasks.withType<JibTask> {
+    notCompatibleWithConfigurationCache("because https://github.com/GoogleContainerTools/jib/issues/3132")
 }
