@@ -40,6 +40,15 @@ dependencies {
     developmentOnly(libs.spring.boot.devtools)
 
     detektPlugins(libs.detekt.formatting)
+
+    testImplementation(libs.kotest.runner.junit5)
+    testImplementation(libs.kotest.assertions.core)
+    testImplementation(libs.kotest.property)
+    testImplementation(libs.kotest.extensions.spring)
+    testImplementation(libs.spring.boot.starter.test) {
+        exclude(module = "mockito-core")
+    }
+    testImplementation(libs.spring.mockk)
 }
 
 kotlin {

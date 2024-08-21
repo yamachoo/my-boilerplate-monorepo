@@ -7,6 +7,7 @@ graphql-java-extended-scalars = "22.0"
 komapper = "2.2.0"
 ksp = "1.9.23-1.0.19"
 detekt = "1.23.6"
+kotest = "5.9.1"
 jib = "3.4.3"
 
 [libraries]
@@ -19,6 +20,13 @@ komapper-spring-boot-starter-r2dbc = { group = "org.komapper", name = "komapper-
 komapper-dialect-mysql-r2dbc = { group = "org.komapper", name = "komapper-dialect-mysql-r2dbc", version.ref = "komapper" }
 komapper-processor = { group = "org.komapper", name = "komapper-processor", version.ref = "komapper" }
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+
+kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
+kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
+kotest-property = { group = "io.kotest", name = "kotest-property", version.ref = "kotest" }
+kotest-extensions-spring = { group = "io.kotest.extensions", name = "kotest-extensions-spring", version = "1.3.0" }
+spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "spring-boot" }
+spring-mockk = { group = "com.ninja-squad", name = "springmockk", version = "4.0.2" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
