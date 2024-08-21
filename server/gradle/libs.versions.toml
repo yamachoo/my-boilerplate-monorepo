@@ -1,39 +1,35 @@
 [versions]
 kotlin = "1.9.23"
 spring-boot = "3.3.2"
-spring-dependency-management = "1.1.6"
 graphql-kotlin = "7.1.4"
-graphql-java-extended-scalars = "22.0"
 komapper = "2.2.0"
-ksp = "1.9.23-1.0.19"
 detekt = "1.23.6"
 kotest = "5.9.1"
-jib = "3.4.3"
 
 [libraries]
 graphql-kotlin-spring-server = { group = "com.expediagroup", name = "graphql-kotlin-spring-server", version.ref = "graphql-kotlin" }
-graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars", version.ref = "graphql-java-extended-scalars" }
-spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation", version.ref = "spring-boot" }
-spring-boot-devtools = { group = "org.springframework.boot", name = "spring-boot-devtools", version.ref = "spring-boot" }
+graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars", version = "22.0" }
+spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
+spring-boot-devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
 komapper-platform = { group = "org.komapper", name = "komapper-platform", version.ref = "komapper" }
-komapper-spring-boot-starter-r2dbc = { group = "org.komapper", name = "komapper-spring-boot-starter-r2dbc", version.ref = "komapper" }
-komapper-dialect-mysql-r2dbc = { group = "org.komapper", name = "komapper-dialect-mysql-r2dbc", version.ref = "komapper" }
-komapper-processor = { group = "org.komapper", name = "komapper-processor", version.ref = "komapper" }
+komapper-spring-boot-starter-r2dbc = { group = "org.komapper", name = "komapper-spring-boot-starter-r2dbc" }
+komapper-dialect-mysql-r2dbc = { group = "org.komapper", name = "komapper-dialect-mysql-r2dbc" }
+komapper-processor = { group = "org.komapper", name = "komapper-processor" }
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
 
 kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
 kotest-property = { group = "io.kotest", name = "kotest-property", version.ref = "kotest" }
 kotest-extensions-spring = { group = "io.kotest.extensions", name = "kotest-extensions-spring", version = "1.3.0" }
-spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "spring-boot" }
+spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
 spring-mockk = { group = "com.ninja-squad", name = "springmockk", version = "4.0.2" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
-spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.6" }
 graphql-kotlin = { id = "com.expediagroup.graphql", version.ref = "graphql-kotlin" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+ksp = { id = "com.google.devtools.ksp", version = "1.9.23-1.0.19" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-jib = { id = "com.google.cloud.tools.jib", version.ref = "jib" }
+jib = { id = "com.google.cloud.tools.jib", version = "3.4.3" }
