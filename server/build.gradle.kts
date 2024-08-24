@@ -2,6 +2,7 @@ import com.google.cloud.tools.jib.gradle.JibTask
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    `java-test-fixtures`
     alias(libs.plugins.kotlin.spring)
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency.management)
@@ -41,9 +42,10 @@ dependencies {
 
     detektPlugins(libs.detekt.formatting)
 
+    testFixturesImplementation(libs.kotest.property)
+
     testImplementation(libs.kotest.runner.junit5)
     testImplementation(libs.kotest.assertions.core)
-    testImplementation(libs.kotest.property)
     testImplementation(libs.kotest.extensions.spring)
     testImplementation(libs.spring.boot.starter.test) {
         exclude(module = "mockito-core")
@@ -68,6 +70,7 @@ detekt {
         "build.gradle.kts",
         "src/main/kotlin",
         "src/test/kotlin",
+        "src/testFixtures/kotlin",
     )
     parallel = true
     autoCorrect = true
