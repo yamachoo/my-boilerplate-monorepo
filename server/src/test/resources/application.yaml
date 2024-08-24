@@ -1,0 +1,11 @@
+spring:
+  r2dbc:
+    url: ${TESTCONTAINERS_URL}
+  sql:
+    init:
+      mode: always
+      schema-locations: file:../db/schema.sql
+
+graphql:
+  packages:
+    - com.yamachoo.server.handler.graphql

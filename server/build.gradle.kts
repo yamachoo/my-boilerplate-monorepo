@@ -49,6 +49,11 @@ dependencies {
         exclude(module = "mockito-core")
     }
     testImplementation(libs.spring.mockk)
+
+    testRuntimeOnly(platform(libs.testcontainers.bom))
+    testRuntimeOnly(libs.testcontainers.mysql)
+    testRuntimeOnly(libs.testcontainers.r2dbc)
+    testRuntimeOnly(libs.mysql.connector.j)
 }
 
 kotlin {
