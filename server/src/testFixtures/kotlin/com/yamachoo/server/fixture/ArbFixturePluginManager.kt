@@ -5,7 +5,13 @@ import kotlin.reflect.KType
 object ArbFixturePluginManager {
     private val plugins = mutableListOf<ArbFixturePlugin>()
 
-    fun register(plugin: ArbFixturePlugin) {
+    init {
+        register(EmailFixturePlugin)
+        register(UsernameFixturePlugin)
+        register(OffsetDateTimeFixturePlugin)
+    }
+
+    private fun register(plugin: ArbFixturePlugin) {
         plugins.add(plugin)
     }
 

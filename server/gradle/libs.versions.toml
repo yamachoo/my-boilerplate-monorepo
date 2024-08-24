@@ -6,6 +6,7 @@ komapper = "2.2.0"
 detekt = "1.23.6"
 kotest = "5.9.1"
 testcontainers = "1.20.1"
+kolin-faker = "2.0.0-rc.5"
 
 [libraries]
 graphql-kotlin-spring-server = { group = "com.expediagroup", name = "graphql-kotlin-spring-server", version.ref = "graphql-kotlin" }
@@ -28,6 +29,8 @@ testcontainers-bom = { group = "org.testcontainers", name = "testcontainers-bom"
 testcontainers-mysql = { group = "org.testcontainers", name = "mysql" }
 testcontainers-r2dbc = { group = "org.testcontainers", name = "r2dbc" }
 mysql-connector-j = { group = "com.mysql", name = "mysql-connector-j", version = "9.0.0" } # for testcontainers
+kolin-faker-bom = { group = "io.github.serpro69", name = "kotlin-faker-bom", version.ref = "kolin-faker" }
+kolin-faker = { group = "io.github.serpro69", name = "kotlin-faker" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
