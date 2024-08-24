@@ -6,7 +6,7 @@ import com.yamachoo.server.domain.user.User as DomainUser
 
 data class User(
     val id: ID,
-    val name: String,
+    val username: String,
     val email: String,
     val createdAt: OffsetDateTime,
 ) {
@@ -14,8 +14,8 @@ data class User(
         operator fun invoke(user: DomainUser): User {
             return User(
                 id = ID(user.id.toString()),
-                name = user.name,
-                email = user.email,
+                username = user.username,
+                email = user.email.value,
                 createdAt = user.createdAt,
             )
         }

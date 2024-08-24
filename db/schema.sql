@@ -29,7 +29,7 @@ CREATE TABLE `schema_migrations` (
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
