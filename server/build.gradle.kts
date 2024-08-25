@@ -45,6 +45,8 @@ dependencies {
     testFixturesImplementation(libs.kotest.property)
     testFixturesImplementation(platform(libs.kolin.faker.bom))
     testFixturesImplementation(libs.kolin.faker)
+    testFixturesImplementation(libs.dbsetup.kotlin)
+    testFixturesImplementation(libs.mysql.connector.j)
 
     testImplementation(libs.kotest.runner.junit5)
     testImplementation(libs.kotest.assertions.core)
@@ -54,10 +56,9 @@ dependencies {
     }
     testImplementation(libs.spring.mockk)
 
-    testRuntimeOnly(platform(libs.testcontainers.bom))
-    testRuntimeOnly(libs.testcontainers.mysql)
-    testRuntimeOnly(libs.testcontainers.r2dbc)
-    testRuntimeOnly(libs.mysql.connector.j)
+    testImplementation(platform(libs.testcontainers.bom))
+    testImplementation(libs.testcontainers.mysql)
+    testImplementation(libs.testcontainers.r2dbc)
 }
 
 kotlin {

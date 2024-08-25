@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:${MYSQL_VERSION}
+    image: ${MYSQL_DOCKER_IMAGE}
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}

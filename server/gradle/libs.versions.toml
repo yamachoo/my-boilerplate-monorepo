@@ -28,9 +28,10 @@ spring-mockk = { group = "com.ninja-squad", name = "springmockk", version = "4.0
 testcontainers-bom = { group = "org.testcontainers", name = "testcontainers-bom", version.ref = "testcontainers" }
 testcontainers-mysql = { group = "org.testcontainers", name = "mysql" }
 testcontainers-r2dbc = { group = "org.testcontainers", name = "r2dbc" }
-mysql-connector-j = { group = "com.mysql", name = "mysql-connector-j", version = "9.0.0" } # for testcontainers
 kolin-faker-bom = { group = "io.github.serpro69", name = "kotlin-faker-bom", version.ref = "kolin-faker" }
 kolin-faker = { group = "io.github.serpro69", name = "kotlin-faker" }
+dbsetup-kotlin = { group = "com.ninja-squad", name = "DbSetup-kotlin", version = "2.1.0" }
+mysql-connector-j = { group = "com.mysql", name = "mysql-connector-j", version = "9.0.0" } # for testcontainers and dbsetup
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
