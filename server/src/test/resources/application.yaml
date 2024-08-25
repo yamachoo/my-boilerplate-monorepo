@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: server
+  main:
+    banner-mode: off
+  r2dbc:
+    url: ${TESTCONTAINERS_URL}
+
+graphql:
+  packages:
+    - com.yamachoo.server.handler.graphql

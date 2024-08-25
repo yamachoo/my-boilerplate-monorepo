@@ -18,6 +18,9 @@ class DatabaseTestConfiguration {
         startupAttempts = 1
         withReuse(true)
 
+        val databaseName = System.getenv("DB_NAME") ?: error("DB_NAME not found")
+        withDatabaseName(databaseName)
+
         val sqlInitDir = "/docker-entrypoint-initdb.d/"
         withCopyToContainer(forHostPath("../db/schema.sql"), sqlInitDir + "000-schema.sql")
         start()
