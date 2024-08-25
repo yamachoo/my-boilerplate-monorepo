@@ -19,9 +19,10 @@ komapper-dialect-mysql-r2dbc = { group = "org.komapper", name = "komapper-dialec
 komapper-processor = { group = "org.komapper", name = "komapper-processor" }
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
 
-kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
-kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
-kotest-property = { group = "io.kotest", name = "kotest-property", version.ref = "kotest" }
+kotest-bom = { group = "io.kotest", name = "kotest-bom", version.ref = "kotest" }
+kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5" }
+kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core" }
+kotest-property = { group = "io.kotest", name = "kotest-property" }
 kotest-extensions-spring = { group = "io.kotest.extensions", name = "kotest-extensions-spring", version = "1.3.0" }
 spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
 spring-mockk = { group = "com.ninja-squad", name = "springmockk", version = "4.0.2" }

@@ -42,6 +42,7 @@ dependencies {
 
     detektPlugins(libs.detekt.formatting)
 
+    testFixturesImplementation(platform(libs.kotest.bom))
     testFixturesImplementation(libs.kotest.property)
     testFixturesImplementation(platform(libs.kolin.faker.bom))
     testFixturesImplementation(libs.kolin.faker)
