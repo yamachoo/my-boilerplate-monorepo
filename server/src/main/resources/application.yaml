@@ -1,6 +1,8 @@
 spring:
   application:
     name: server
+  main:
+    banner-mode: off
   r2dbc:
     url: ${R2DBC_URL}
 
