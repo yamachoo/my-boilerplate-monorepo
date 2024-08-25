@@ -32,7 +32,7 @@ class RegisterUserMutation(
 }
 
 data class RegisterUserInput(
-    @field:Size(min = 1, max = 10)
+    @field:Size(min = 1, max = 100)
     val username: String,
     @field:Email
     val email: String,

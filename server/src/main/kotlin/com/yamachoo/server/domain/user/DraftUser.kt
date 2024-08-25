@@ -7,6 +7,6 @@ data class DraftUser(
     val username: Username,
     val email: Email,
 ) {
-    val id: Long = 0
+    val id: UInt = UInt.MIN_VALUE
     val createdAt: OffsetDateTime = OffsetDateTime.MIN
 }

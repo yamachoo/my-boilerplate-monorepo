@@ -13,11 +13,9 @@ class UserRepositoryImpl(
     private val db: R2dbcDatabase,
 ) : UserRepository {
     override suspend fun create(user: DraftUser): User {
-        return db.withTransaction {
-            db.runQuery {
-                val u = Meta.user
-                QueryDsl.insert(u).single(User(user))
-            }
+        return db.runQuery {
+            val u = Meta.user
+            QueryDsl.insert(u).single(User(user))
         }
     }
 }

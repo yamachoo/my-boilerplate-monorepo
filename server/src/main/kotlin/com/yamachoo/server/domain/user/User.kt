@@ -4,7 +4,7 @@ import com.yamachoo.server.domain.shared.values.Email
 import java.time.OffsetDateTime
 
 data class User(
-    val id: Long,
+    val id: UInt,
     val username: Username,
     val email: Email,
     val createdAt: OffsetDateTime,
