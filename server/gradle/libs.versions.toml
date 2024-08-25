@@ -12,6 +12,7 @@ kolin-faker = "2.0.0-rc.5"
 graphql-kotlin-spring-server = { group = "com.expediagroup", name = "graphql-kotlin-spring-server", version.ref = "graphql-kotlin" }
 graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars", version = "22.0" }
 spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
+spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
 spring-boot-devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
 komapper-platform = { group = "org.komapper", name = "komapper-platform", version.ref = "komapper" }
 komapper-spring-boot-starter-r2dbc = { group = "org.komapper", name = "komapper-spring-boot-starter-r2dbc" }

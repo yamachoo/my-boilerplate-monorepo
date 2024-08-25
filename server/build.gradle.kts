@@ -29,6 +29,7 @@ dependencies {
     implementation(libs.graphql.kotlin.spring.server)
     implementation(libs.graphql.java.extended.scalars)
     implementation(libs.spring.boot.starter.validation)
+    implementation(libs.spring.boot.starter.actuator)
 
     platform(libs.komapper.platform).let {
         implementation(it)
