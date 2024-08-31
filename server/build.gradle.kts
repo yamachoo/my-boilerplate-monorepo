@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.kotlin.spring)
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency.management)
-    alias(libs.plugins.graphql.kotlin)
     alias(libs.plugins.ksp)
     alias(libs.plugins.detekt)
     alias(libs.plugins.jib)
@@ -26,8 +25,14 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.graphql.kotlin.spring.server)
+    implementation(libs.spring.boot.starter.graphql)
+    implementation(libs.spring.data.commons)
     implementation(libs.graphql.java.extended.scalars)
+    implementation(libs.spring.boot.starter.webflux)
+    implementation(libs.jackson.module.kotlin)
+    implementation(libs.reactor.kotlin.extensions)
+    implementation(kotlin("reflect"))
+    implementation(libs.kotlinx.coroutines.reactor)
     implementation(libs.spring.boot.starter.validation)
     implementation(libs.spring.boot.starter.actuator)
 
@@ -57,6 +62,8 @@ dependencies {
         exclude(module = "mockito-core")
     }
     testImplementation(libs.spring.mockk)
+    testImplementation(libs.spring.graphql.test)
+    testImplementation(libs.reactor.test)
 
     testImplementation(platform(libs.testcontainers.bom))
     testImplementation(libs.testcontainers.mysql)

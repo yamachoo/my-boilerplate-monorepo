@@ -1,22 +1,25 @@
 package com.yamachoo.server.handler.graphql.mutation
 
-import com.expediagroup.graphql.server.operations.Mutation
 import com.yamachoo.server.handler.graphql.type.User
 import com.yamachoo.server.usecase.user.RegisterUserUseCase
 import jakarta.validation.Valid
 import jakarta.validation.constraints.Email
 import jakarta.validation.constraints.Size
-import org.springframework.stereotype.Component
+import org.springframework.graphql.data.method.annotation.Argument
+import org.springframework.graphql.data.method.annotation.MutationMapping
+import org.springframework.stereotype.Controller
 import org.springframework.validation.annotation.Validated
 import com.yamachoo.server.domain.shared.values.Email as DomainEmail
 import com.yamachoo.server.domain.user.DraftUser as DomainDraftUser
 
-@Component
+@Controller
 @Validated
 class RegisterUserMutation(
     private val registerUserUseCase: RegisterUserUseCase,
-) : Mutation {
+) {
+    @MutationMapping
     suspend fun registerUser(
+        @Argument
         @Valid
         input: RegisterUserInput,
     ): User {

@@ -3,9 +3,11 @@ spring:
     name: server
   main:
     banner-mode: off
+  graphql:
+    graphiql:
+      enabled: true
+    schema:
+      printer:
+        enabled: true
   r2dbc:
     url: ${R2DBC_URL}
-
-graphql:
-  packages:
-    - com.yamachoo.server.handler.graphql

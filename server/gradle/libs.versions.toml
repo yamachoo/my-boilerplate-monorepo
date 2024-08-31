@@ -1,7 +1,6 @@
 [versions]
 kotlin = "1.9.23"
-spring-boot = "3.3.2"
-graphql-kotlin = "7.1.4"
+spring-boot = "3.3.3"
 komapper = "2.2.0"
 detekt = "1.23.6"
 kotest = "5.9.1"
@@ -9,8 +8,13 @@ testcontainers = "1.20.1"
 kolin-faker = "2.0.0-rc.5"
 
 [libraries]
-graphql-kotlin-spring-server = { group = "com.expediagroup", name = "graphql-kotlin-spring-server", version.ref = "graphql-kotlin" }
-graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars", version = "22.0" }
+spring-boot-starter-graphql = { group = "org.springframework.boot", name = "spring-boot-starter-graphql" }
+spring-data-commons = { group = "org.springframework.data", name = "spring-data-commons" }
+graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars", version="22.0" }
+spring-boot-starter-webflux = { group = "org.springframework.boot", name = "spring-boot-starter-webflux" }
+jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin" }
+reactor-kotlin-extensions = { group = "io.projectreactor.kotlin", name = "reactor-kotlin-extensions" }
+kotlinx-coroutines-reactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor" }
 spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
 spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
 spring-boot-devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
@@ -27,6 +31,8 @@ kotest-property = { group = "io.kotest", name = "kotest-property" }
 kotest-extensions-spring = { group = "io.kotest.extensions", name = "kotest-extensions-spring", version = "1.3.0" }
 spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
 spring-mockk = { group = "com.ninja-squad", name = "springmockk", version = "4.0.2" }
+reactor-test = { group = "io.projectreactor", name = "reactor-test" }
+spring-graphql-test = { group = "org.springframework.graphql", name = "spring-graphql-test" }
 testcontainers-bom = { group = "org.testcontainers", name = "testcontainers-bom", version.ref = "testcontainers" }
 testcontainers-mysql = { group = "org.testcontainers", name = "mysql" }
 testcontainers-r2dbc = { group = "org.testcontainers", name = "r2dbc" }
@@ -40,7 +46,6 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.6" }
-graphql-kotlin = { id = "com.expediagroup.graphql", version.ref = "graphql-kotlin" }
 ksp = { id = "com.google.devtools.ksp", version = "1.9.23-1.0.19" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 jib = { id = "com.google.cloud.tools.jib", version = "3.4.3" }

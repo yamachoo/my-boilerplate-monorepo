@@ -1,0 +1,22 @@
+scalar DateTime
+  @specifiedBy(url: "https://scalars.graphql.org/andimarek/date-time.html")
+
+input RegisterUserInput {
+  username: String!
+  email: String!
+}
+
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  createdAt: DateTime!
+}
+
+type Query {
+  hello(name: String! = "World"): String!
+}
+
+type Mutation {
+  registerUser(input: RegisterUserInput!): User!
+}
