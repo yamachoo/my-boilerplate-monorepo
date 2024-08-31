@@ -78,7 +78,7 @@ object ArbFixture {
             // Collection types
             classifier == List::class -> {
                 val elementType = requireNotNull(
-                    type.arguments.firstOrNull()?.type
+                    type.arguments.firstOrNull()?.type,
                 ) { "Invalid type argument for List" }
                 Arb.list(getRandomParameterValue(type = elementType, asArb = true) as Arb<*>)
             }

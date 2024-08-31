@@ -27,7 +27,7 @@ class RegisterUserMutation(
             DomainDraftUser(
                 username = input.username,
                 email = DomainEmail(input.email),
-            )
+            ),
         )
 
         return User(user)

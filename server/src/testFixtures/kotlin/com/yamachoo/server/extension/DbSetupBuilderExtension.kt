@@ -27,7 +27,7 @@ object DbSetupBuilderExtension {
 
     @PublishedApi
     internal inline fun <reified T : Any> T.toPairArray(
-        excludeProperties: List<KProperty1<T, Any?>> = emptyList()
+        excludeProperties: List<KProperty1<T, Any?>> = emptyList(),
     ): Array<Pair<String, Any?>> {
         val excludes = excludeProperties.map { it.name.camelToSnake() }
         return T::class.memberProperties
@@ -42,8 +42,7 @@ object DbSetupBuilderExtension {
     }
 
     @PublishedApi
-    internal fun String.camelToSnake(): String =
-        replace(Regex("(?<=.)([A-Z])"), "_$1").lowercase()
+    internal fun String.camelToSnake(): String = replace(Regex("(?<=.)([A-Z])"), "_$1").lowercase()
 
     @PublishedApi
     internal fun processValue(value: Any): Any? {
