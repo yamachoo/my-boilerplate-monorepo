@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.spring.dependency.management)
     alias(libs.plugins.ksp)
     alias(libs.plugins.detekt)
+    alias(libs.plugins.spotless)
     alias(libs.plugins.jib)
 }
 
@@ -46,8 +47,6 @@ dependencies {
 
     developmentOnly(libs.spring.boot.devtools)
 
-    detektPlugins(libs.detekt.formatting)
-
     testFixturesImplementation(platform(libs.kotest.bom))
     testFixturesImplementation(libs.kotest.property)
     testFixturesImplementation(platform(libs.kolin.faker.bom))
@@ -78,14 +77,27 @@ kotlin {
 
 detekt {
     source.setFrom(
-        "settings.gradle.kts",
-        "build.gradle.kts",
         "src/main/kotlin",
         "src/test/kotlin",
         "src/testFixtures/kotlin",
     )
     parallel = true
     autoCorrect = true
+}
+
+spotless {
+    val ktlintEditorConfig = mapOf("max_line_length" to "120")
+    kotlin {
+        target("src/*/kotlin/**/*.kt")
+        ktlint().editorConfigOverride(ktlintEditorConfig)
+    }
+    kotlinGradle {
+        ktlint().editorConfigOverride(ktlintEditorConfig)
+    }
+    format("graphql") {
+        target("src/*/resources/graphql/**/*.graphqls")
+        prettier()
+    }
 }
 
 tasks.withType<Test> {
