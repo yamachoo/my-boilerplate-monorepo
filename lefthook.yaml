@@ -6,6 +6,12 @@ pre-commit:
       root: server
       run: ./gradlew spotlessApply && ./gradlew detekt
       stage_fixed: true
+    web-format:
+      tags: web format
+      root: web
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: pnpm check
+      stage_fixed: true
     sql-format:
       tags: sql format
       root: db
