@@ -4,6 +4,8 @@ spring:
   main:
     banner-mode: off
   graphql:
+    cors:
+      allowed-origins: ${CORS_ALLOWED_ORIGINS}
     graphiql:
       enabled: true
     schema:
