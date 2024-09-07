@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "ignore": ["src/router.ts"]
+    "ignore": ["src/router.ts", "src/gql/*.ts"]
   },
   "vcs": {
     "enabled": true,
