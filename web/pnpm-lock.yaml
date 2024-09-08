@@ -32,6 +32,9 @@ importers:
       react-router-dom:
         specifier: ^6.26.1
         version: 6.26.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@0no-co/graphqlsp':
         specifier: ^1.12.13
@@ -63,6 +66,9 @@ importers:
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
+      graphql-codegen-typescript-validation-schema:
+        specifier: ^0.16.0
+        version: 0.16.0(graphql@16.9.0)
       typescript:
         specifier: ^5.5.3
         version: 5.5.4
@@ -1517,6 +1523,14 @@ packages:
   globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
+
+  graphlib@2.1.8:
+    resolution: {integrity: sha512-jcLLfkpoVGmH7/InMC/1hIvOPSUh38oJtGhvrOFGzioE1DZ+0YW16RgmOJhHiuWTvGiJQ9Z1Ik43JvkRPRvE+A==}
+
+  graphql-codegen-typescript-validation-schema@0.16.0:
+    resolution: {integrity: sha512-ma/I91P8TNLNEjwUdzpu+ejg3NeJHyvaVDZtgnvd1QHmq/1PScoOXY5unGlPZw6wVN6APyYVALogx3NMPy+vKA==}
+    peerDependencies:
+      graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
   graphql-config@5.1.2:
     resolution: {integrity: sha512-kVwUuFz1h9u7B0nDPtnLFWN+x018niaH3zi1ChFCNfbunhDVJ911Z3YcglK5EfDfySeeH+zCa1aGxd1wMgNd7g==}
@@ -4023,6 +4037,22 @@ snapshots:
       ignore: 5.3.2
       merge2: 1.4.1
       slash: 3.0.0
+
+  graphlib@2.1.8:
+    dependencies:
+      lodash: 4.17.21
+
+  graphql-codegen-typescript-validation-schema@0.16.0(graphql@16.9.0):
+    dependencies:
+      '@graphql-codegen/plugin-helpers': 5.0.4(graphql@16.9.0)
+      '@graphql-codegen/schema-ast': 4.1.0(graphql@16.9.0)
+      '@graphql-codegen/visitor-plugin-common': 5.3.1(graphql@16.9.0)
+      '@graphql-tools/utils': 10.5.4(graphql@16.9.0)
+      graphlib: 2.1.8
+      graphql: 16.9.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
 
   graphql-config@5.1.2(@types/node@22.5.4)(graphql@16.9.0)(typescript@5.5.4):
     dependencies:
