@@ -29,6 +29,7 @@ dependencies {
     implementation(libs.spring.boot.starter.graphql)
     implementation(libs.spring.data.commons)
     implementation(libs.graphql.java.extended.scalars)
+    implementation(libs.graphql.java.extended.validation)
     implementation(libs.spring.boot.starter.webflux)
     implementation(libs.jackson.module.kotlin)
     implementation(libs.reactor.kotlin.extensions)
