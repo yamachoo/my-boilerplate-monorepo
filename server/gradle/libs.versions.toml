@@ -22,6 +22,7 @@ komapper-platform = { group = "org.komapper", name = "komapper-platform", versio
 komapper-spring-boot-starter-r2dbc = { group = "org.komapper", name = "komapper-spring-boot-starter-r2dbc" }
 komapper-dialect-mysql-r2dbc = { group = "org.komapper", name = "komapper-dialect-mysql-r2dbc" }
 komapper-processor = { group = "org.komapper", name = "komapper-processor" }
+kotlin-logging-jvm = { group = "io.github.oshai", name = "kotlin-logging-jvm", version = "7.0.0" }
 
 kotest-bom = { group = "io.kotest", name = "kotest-bom", version.ref = "kotest" }
 kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5" }

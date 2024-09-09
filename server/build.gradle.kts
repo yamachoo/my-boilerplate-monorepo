@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.reactor)
     implementation(libs.spring.boot.starter.validation)
     implementation(libs.spring.boot.starter.actuator)
+    implementation(libs.kotlin.logging.jvm)
 
     platform(libs.komapper.platform).let {
         implementation(it)
