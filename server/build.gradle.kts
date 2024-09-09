@@ -65,6 +65,7 @@ dependencies {
     testImplementation(libs.spring.graphql.test)
     testImplementation(libs.reactor.test)
 
+    testImplementation(libs.spring.boot.testcontainers)
     testImplementation(platform(libs.testcontainers.bom))
     testImplementation(libs.testcontainers.mysql)
     testImplementation(libs.testcontainers.r2dbc)

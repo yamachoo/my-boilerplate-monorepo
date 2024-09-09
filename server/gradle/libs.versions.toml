@@ -32,6 +32,7 @@ spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-
 spring-mockk = { group = "com.ninja-squad", name = "springmockk", version = "4.0.2" }
 reactor-test = { group = "io.projectreactor", name = "reactor-test" }
 spring-graphql-test = { group = "org.springframework.graphql", name = "spring-graphql-test" }
+spring-boot-testcontainers = { group = "org.springframework.boot", name = "spring-boot-testcontainers" }
 testcontainers-bom = { group = "org.testcontainers", name = "testcontainers-bom", version.ref = "testcontainers" }
 testcontainers-mysql = { group = "org.testcontainers", name = "mysql" }
 testcontainers-r2dbc = { group = "org.testcontainers", name = "r2dbc" }
