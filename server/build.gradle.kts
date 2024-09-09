@@ -97,7 +97,7 @@ spotless {
         ktlint().editorConfigOverride(ktlintEditorConfig)
     }
     format("graphql") {
-        target("src/*/resources/graphql/**/*.graphqls")
+        target("src/*/resources/graphql/**/*.graphqls", "src/*/resources/graphql-test/**/*.graphql")
         prettier()
     }
 }
