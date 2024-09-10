@@ -1,4 +1,5 @@
 import com.google.cloud.tools.jib.gradle.JibTask
+import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
@@ -101,6 +102,10 @@ spotless {
         target("src/*/resources/graphql/**/*.graphqls", "src/*/resources/graphql-test/**/*.graphql")
         prettier()
     }
+}
+
+tasks.withType<BootRun> {
+    systemProperties = mapOf("spring.output.ansi.enabled" to "always")
 }
 
 tasks.withType<Test> {
