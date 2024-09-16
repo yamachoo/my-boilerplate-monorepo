@@ -15,6 +15,7 @@ export type Scalars = {
   Int: { input: number; output: number; }
   Float: { input: number; output: number; }
   DateTime: { input: Date; output: Date; }
+  Email: { input: string; output: string; }
 };
 
 export type Mutation = {
@@ -38,14 +39,14 @@ export type QueryHelloArgs = {
 };
 
 export type RegisterUserInput = {
-  email: Scalars['String']['input'];
+  email: Scalars['Email']['input'];
   username: Scalars['String']['input'];
 };
 
 export type User = {
   __typename?: 'User';
   createdAt: Scalars['DateTime']['output'];
-  email: Scalars['String']['output'];
+  email: Scalars['Email']['output'];
   id: Scalars['ID']['output'];
   username: Scalars['String']['output'];
 };

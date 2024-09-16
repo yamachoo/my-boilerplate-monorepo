@@ -1,5 +1,6 @@
 package com.yamachoo.server.handler.graphql.config
 
+import com.yamachoo.server.handler.graphql.scalar.EmailScalar
 import graphql.scalars.ExtendedScalars
 import graphql.validation.rules.ValidationRules
 import graphql.validation.schemawiring.ValidationSchemaWiring
@@ -19,6 +20,7 @@ class GraphQLConfig {
             wiringBuilder.apply {
                 directiveWiring(schemaWiring)
                 scalar(ExtendedScalars.DateTime)
+                scalar(EmailScalar.EMAIL)
             }
         }
     }

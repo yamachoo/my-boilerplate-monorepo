@@ -84,6 +84,7 @@ tasks.generateJava {
     schemaPaths.add("$projectDir/src/main/resources/graphql")
     packageName = "com.yamachoo.server.handler.graphql"
     subPackageNameTypes = "type"
+    typeMapping.putAll(mapOf("Email" to "String"))
 }
 
 detekt {

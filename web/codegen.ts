@@ -1,5 +1,4 @@
 import type { CodegenConfig } from '@graphql-codegen/cli'
-import { z } from 'zod'
 
 const config: CodegenConfig = {
   overwrite: true,
@@ -12,7 +11,9 @@ const config: CodegenConfig = {
       config: {
         strictScalars: true,
         scalars: {
+          ID: 'string',
           DateTime: 'Date',
+          Email: 'string',
         },
       },
     },
@@ -20,9 +21,11 @@ const config: CodegenConfig = {
       plugins: ['typescript-validation-schema'],
       config: {
         importFrom: './graphql',
+        useTypeImports: true,
         schema: 'zod',
         scalarSchemas: {
-          DateTime: z.string().datetime({ offset: true }),
+          DateTime: 'z.string().datetime({ offset: true })',
+          Email: 'z.string().email()',
         },
         directives: {
           Size: {
