@@ -8,8 +8,5 @@ spring:
       allowed-origins: ${CORS_ALLOWED_ORIGINS}
     graphiql:
       enabled: true
-    schema:
-      printer:
-        enabled: true
   r2dbc:
     url: ${R2DBC_URL}
