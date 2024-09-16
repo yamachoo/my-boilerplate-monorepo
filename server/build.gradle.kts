@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.kotlin.spring)
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency.management)
+    alias(libs.plugins.dgs.codegen)
     alias(libs.plugins.ksp)
     alias(libs.plugins.detekt)
     alias(libs.plugins.spotless)
@@ -29,6 +30,7 @@ repositories {
 dependencies {
     implementation(libs.spring.boot.starter.graphql)
     implementation(libs.spring.data.commons)
+    implementation(platform(libs.graphql.dgs.platform.dependencies))
     implementation(libs.graphql.java.extended.scalars)
     implementation(libs.graphql.java.extended.validation)
     implementation(libs.spring.boot.starter.webflux)
@@ -36,7 +38,6 @@ dependencies {
     implementation(libs.reactor.kotlin.extensions)
     implementation(kotlin("reflect"))
     implementation(libs.kotlinx.coroutines.reactor)
-    implementation(libs.spring.boot.starter.validation)
     implementation(libs.spring.boot.starter.actuator)
     implementation(libs.kotlin.logging.jvm)
 
@@ -77,6 +78,12 @@ kotlin {
     compilerOptions {
         freeCompilerArgs.addAll("-Xjsr305=strict")
     }
+}
+
+tasks.generateJava {
+    schemaPaths.add("$projectDir/src/main/resources/graphql")
+    packageName = "com.yamachoo.server.handler.graphql"
+    subPackageNameTypes = "type"
 }
 
 detekt {

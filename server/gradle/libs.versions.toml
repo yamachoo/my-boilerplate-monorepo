@@ -1,6 +1,7 @@
 [versions]
 kotlin = "1.9.23"
 spring-boot = "3.3.3"
+dgs = "9.1.1"
 komapper = "2.2.0"
 kotest = "5.9.1"
 testcontainers = "1.20.1"
@@ -9,13 +10,13 @@ kolin-faker = "2.0.0-rc.5"
 [libraries]
 spring-boot-starter-graphql = { group = "org.springframework.boot", name = "spring-boot-starter-graphql" }
 spring-data-commons = { group = "org.springframework.data", name = "spring-data-commons" }
-graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars", version="22.0" }
-graphql-java-extended-validation = { group = "com.graphql-java", name = "graphql-java-extended-validation", version="22.0" }
+graphql-dgs-platform-dependencies = { group = "com.netflix.graphql.dgs", name = "graphql-dgs-platform-dependencies", version.ref = "dgs" }
+graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars" }
+graphql-java-extended-validation = { group = "com.graphql-java", name = "graphql-java-extended-validation" }
 spring-boot-starter-webflux = { group = "org.springframework.boot", name = "spring-boot-starter-webflux" }
 jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin" }
 reactor-kotlin-extensions = { group = "io.projectreactor.kotlin", name = "reactor-kotlin-extensions" }
 kotlinx-coroutines-reactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor" }
-spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
 spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
 spring-boot-devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
 komapper-platform = { group = "org.komapper", name = "komapper-platform", version.ref = "komapper" }
@@ -47,6 +48,7 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.6" }
+dgs-codegen = { id = "com.netflix.dgs.codegen", version = "6.3.0" }
 ksp = { id = "com.google.devtools.ksp", version = "1.9.23-1.0.19" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.23.6" }
 spotless = { id = "com.diffplug.spotless", version = "6.25.0" }
