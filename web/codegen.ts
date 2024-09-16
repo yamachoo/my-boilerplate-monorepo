@@ -22,15 +22,15 @@ const config: CodegenConfig = {
       config: {
         importFrom: './graphql',
         useTypeImports: true,
-        schema: 'zod',
+        schema: 'valibot',
         scalarSchemas: {
-          DateTime: 'z.string().datetime({ offset: true })',
-          Email: 'z.string().email()',
+          DateTime: 'v.pipe(v.string(), v.isoDateTime())',
+          Email: 'v.pipe(v.string(), v.nonEmpty(), v.email())',
         },
         directives: {
           Size: {
-            min: 'min',
-            max: 'max',
+            min: 'minLength',
+            max: 'maxLength',
           },
         },
       },
