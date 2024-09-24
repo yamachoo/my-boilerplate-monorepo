@@ -14,6 +14,15 @@ services:
       - mysql_log:/var/log/mysql
     ports:
       - ${DB_PORT}:3306
+  flagd:
+    image: ghcr.io/open-feature/flagd:latest
+    volumes:
+      - type: bind
+        source: ./containers/flagd
+        target: /etc/flagd
+    ports:
+      - "8013:8013"
+    command: start --uri file:/etc/flagd/flags.flagd.json
 
 volumes:
   mysql_data:

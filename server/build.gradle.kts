@@ -49,6 +49,9 @@ dependencies {
     implementation(libs.komapper.dialect.mysql.r2dbc)
     ksp(libs.komapper.processor)
 
+    implementation(libs.openfeature.sdk)
+    implementation(libs.openfeature.providers.flagd)
+
     developmentOnly(libs.spring.boot.devtools)
 
     testFixturesImplementation(platform(libs.kotest.bom))

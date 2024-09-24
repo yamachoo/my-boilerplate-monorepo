@@ -24,6 +24,8 @@ komapper-spring-boot-starter-r2dbc = { group = "org.komapper", name = "komapper-
 komapper-dialect-mysql-r2dbc = { group = "org.komapper", name = "komapper-dialect-mysql-r2dbc" }
 komapper-processor = { group = "org.komapper", name = "komapper-processor" }
 kotlin-logging-jvm = { group = "io.github.oshai", name = "kotlin-logging-jvm", version = "7.0.0" }
+openfeature-sdk = { group = "dev.openfeature", name = "sdk", version = "1.11.0" }
+openfeature-providers-flagd = { group = "dev.openfeature.contrib.providers", name = "flagd", version = "0.8.9" }
 
 kotest-bom = { group = "io.kotest", name = "kotest-bom", version.ref = "kotest" }
 kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5" }
