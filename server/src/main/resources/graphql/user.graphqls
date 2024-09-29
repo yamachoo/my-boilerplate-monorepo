@@ -1,0 +1,15 @@
+input RegisterUserInput {
+  username: String! @Size(min: 1, max: 100)
+  email: Email!
+}
+
+type User {
+  id: ID!
+  username: String!
+  email: Email!
+  createdAt: DateTime!
+}
+
+extend type Mutation {
+  registerUser(input: RegisterUserInput!): User!
+}
