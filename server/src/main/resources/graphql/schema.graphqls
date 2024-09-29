@@ -9,22 +9,6 @@ scalar DateTime
 
 scalar Email
 
-input RegisterUserInput {
-  username: String! @Size(min: 1, max: 100)
-  email: Email!
-}
+type Query
 
-type User {
-  id: ID!
-  username: String!
-  email: Email!
-  createdAt: DateTime!
-}
-
-type Query {
-  hello(name: String! = "World" @Size(min: 1, max: 10)): String!
-}
-
-type Mutation {
-  registerUser(input: RegisterUserInput!): User!
-}
+type Mutation
