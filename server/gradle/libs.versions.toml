@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.9.23"
-spring-boot = "3.3.3"
-dgs = "9.1.1"
+spring-boot = "3.4.1"
+dgs = "10.0.1"
 komapper = "2.2.0"
 kotest = "5.9.1"
 testcontainers = "1.20.1"
@@ -47,8 +47,8 @@ mysql-connector-j = { group = "com.mysql", name = "mysql-connector-j", version =
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
-spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.6" }
-dgs-codegen = { id = "com.netflix.dgs.codegen", version = "6.3.0" }
+spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.7" }
+dgs-codegen = { id = "com.netflix.dgs.codegen", version = "7.0.3" }
 ksp = { id = "com.google.devtools.ksp", version = "1.9.23-1.0.19" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.23.6" }
 spotless = { id = "com.diffplug.spotless", version = "6.25.0" }
