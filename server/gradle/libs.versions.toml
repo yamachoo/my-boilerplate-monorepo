@@ -1,7 +1,6 @@
 [versions]
 kotlin = "1.9.23"
 spring-boot = "3.4.1"
-dgs = "10.0.1"
 komapper = "4.0.0"
 kotest = "5.9.1"
 testcontainers = "1.20.4"
@@ -10,12 +9,12 @@ kolin-faker = "2.0.0-rc.5"
 [libraries]
 spring-boot-starter-graphql = { group = "org.springframework.boot", name = "spring-boot-starter-graphql" }
 spring-data-commons = { group = "org.springframework.data", name = "spring-data-commons" }
-graphql-dgs-platform-dependencies = { group = "com.netflix.graphql.dgs", name = "graphql-dgs-platform-dependencies", version.ref = "dgs" }
 graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars" }
 graphql-java-extended-validation = { group = "com.graphql-java", name = "graphql-java-extended-validation" }
 spring-boot-starter-webflux = { group = "org.springframework.boot", name = "spring-boot-starter-webflux" }
 jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin" }
 reactor-kotlin-extensions = { group = "io.projectreactor.kotlin", name = "reactor-kotlin-extensions" }
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect" }
 kotlinx-coroutines-reactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor" }
 spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
 spring-boot-devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
@@ -43,6 +42,38 @@ kolin-faker = { group = "io.github.serpro69", name = "kotlin-faker" }
 dbsetup-kotlin = { group = "com.ninja-squad", name = "DbSetup-kotlin", version = "2.1.0" }
 # for testcontainers and dbsetup
 mysql-connector-j = { group = "com.mysql", name = "mysql-connector-j", version = "9.1.0" }
+
+[bundles]
+spring-graphql = [
+  "spring-boot-starter-graphql",
+  "spring-data-commons",
+  "spring-boot-starter-webflux",
+  "jackson-module-kotlin",
+  "reactor-kotlin-extensions",
+  "kotlin-reflect",
+  "kotlinx-coroutines-reactor",
+  "spring-boot-starter-actuator",
+]
+graphql-java-extended = [
+  "graphql-java-extended-scalars",
+  "graphql-java-extended-validation",
+]
+komapper = [
+  "komapper-spring-boot-starter-r2dbc",
+  "komapper-dialect-mysql-r2dbc",
+]
+
+kotest = ["kotest-runner-junit5", "kotest-assertions-core", "kotest-property"]
+spring-test = [
+  "spring-boot-starter-test",
+  "reactor-test",
+  "spring-graphql-test",
+]
+testcontainers = [
+  "spring-boot-testcontainers",
+  "testcontainers-mysql",
+  "testcontainers-r2dbc",
+]
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

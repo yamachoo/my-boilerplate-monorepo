@@ -28,25 +28,15 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.spring.boot.starter.graphql)
-    implementation(libs.spring.data.commons)
-    implementation(platform(libs.graphql.dgs.platform.dependencies))
-    implementation(libs.graphql.java.extended.scalars)
-    implementation(libs.graphql.java.extended.validation)
-    implementation(libs.spring.boot.starter.webflux)
-    implementation(libs.jackson.module.kotlin)
-    implementation(libs.reactor.kotlin.extensions)
-    implementation(kotlin("reflect"))
-    implementation(libs.kotlinx.coroutines.reactor)
-    implementation(libs.spring.boot.starter.actuator)
+    implementation(libs.bundles.spring.graphql)
+    implementation(libs.bundles.graphql.java.extended)
     implementation(libs.kotlin.logging.jvm)
 
     platform(libs.komapper.platform).let {
         implementation(it)
         ksp(it)
     }
-    implementation(libs.komapper.spring.boot.starter.r2dbc)
-    implementation(libs.komapper.dialect.mysql.r2dbc)
+    implementation(libs.bundles.komapper)
     ksp(libs.komapper.processor)
 
     developmentOnly(libs.spring.boot.devtools)
@@ -58,20 +48,15 @@ dependencies {
     testFixturesImplementation(libs.dbsetup.kotlin)
     testFixturesImplementation(libs.mysql.connector.j)
 
-    testImplementation(libs.kotest.runner.junit5)
-    testImplementation(libs.kotest.assertions.core)
+    testImplementation(libs.bundles.kotest)
     testImplementation(libs.kotest.extensions.spring)
-    testImplementation(libs.spring.boot.starter.test) {
+    testImplementation(libs.bundles.spring.test) {
         exclude(module = "mockito-core")
     }
     testImplementation(libs.spring.mockk)
-    testImplementation(libs.spring.graphql.test)
-    testImplementation(libs.reactor.test)
 
-    testImplementation(libs.spring.boot.testcontainers)
     testImplementation(platform(libs.testcontainers.bom))
-    testImplementation(libs.testcontainers.mysql)
-    testImplementation(libs.testcontainers.r2dbc)
+    testImplementation(libs.bundles.testcontainers)
 }
 
 kotlin {
