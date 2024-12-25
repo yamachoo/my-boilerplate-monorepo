@@ -110,6 +110,11 @@ spotless {
         target("src/*/resources/graphql/**/*.graphqls", "src/*/resources/graphql-test/**/*.graphql")
         prettier()
     }
+    format("toml") {
+        target("gradle/**/*.toml")
+        prettier(mapOf("prettier" to "3.0.3", "prettier-plugin-toml" to "2.0.1"))
+            .config(mapOf("plugins" to listOf("prettier-plugin-toml")))
+    }
 }
 
 tasks.withType<BootRun> {
