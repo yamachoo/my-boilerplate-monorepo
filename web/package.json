@@ -34,12 +34,12 @@
     "@vitejs/plugin-react": "^4.3.4",
     "concurrently": "^9.1.0",
     "graphql-codegen-typescript-validation-schema": "^0.16.0",
-    "typescript": "^5.5.3",
+    "typescript": "^5.7.2",
     "vite": "^6.0.5"
   },
   "engines": {
-    "node": "20.x",
+    "node": "22.x",
     "pnpm": "9.x"
   },
-  "packageManager": "pnpm@9.9.0"
+  "packageManager": "pnpm@9.15.1"
 }
