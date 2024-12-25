@@ -4,7 +4,7 @@ spring-boot = "3.4.1"
 dgs = "10.0.1"
 komapper = "4.0.0"
 kotest = "5.9.1"
-testcontainers = "1.20.1"
+testcontainers = "1.20.4"
 kolin-faker = "2.0.0-rc.5"
 
 [libraries]
@@ -41,7 +41,7 @@ testcontainers-r2dbc = { group = "org.testcontainers", name = "r2dbc" }
 kolin-faker-bom = { group = "io.github.serpro69", name = "kotlin-faker-bom", version.ref = "kolin-faker" }
 kolin-faker = { group = "io.github.serpro69", name = "kotlin-faker" }
 dbsetup-kotlin = { group = "com.ninja-squad", name = "DbSetup-kotlin", version = "2.1.0" }
-mysql-connector-j = { group = "com.mysql", name = "mysql-connector-j", version = "9.0.0" } # for testcontainers and dbsetup
+mysql-connector-j = { group = "com.mysql", name = "mysql-connector-j", version = "9.1.0" } # for testcontainers and dbsetup
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
