@@ -1,0 +1,85 @@
+name: Server
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['server/**']
+  pull_request:
+    paths: ['server/**']
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./server
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          sparse-checkout: |
+            db
+            server
+            .env.example
+            .envrc
+
+      - name: Setup environment file at root
+        working-directory: .
+        run: cp .env.example .env
+
+      - name: Setup environment file at server
+        run: cp .env.example .env
+
+      - name: Restore direnv cache
+        id: cache-direnv
+        uses: actions/cache/restore@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        with:
+          path: /opt/pipx_bin/direnv
+          key: ${{ runner.os }}-direnv-cache
+
+      - name: Install direnv if not cached
+        if: steps.cache-direnv.outputs.cache-hit != 'true'
+        run: |
+          curl -sfL https://direnv.net/install.sh | bash
+
+      - name: Save direnv cache
+        if: steps.cache-direnv.outputs.cache-hit != 'true'
+        uses: actions/cache/save@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        with:
+          path: /opt/pipx_bin/direnv
+          key: ${{ runner.os }}-direnv-cache
+
+      - name: Allow .envrc
+        run: direnv allow
+
+      - name: Load PATH changes
+        run: direnv exec . sh -c 'echo $PATH' > "$GITHUB_PATH"
+
+      - name: Load other environment changes
+        run: direnv export gha >> "$GITHUB_ENV"
+
+      - name: Setup Java
+        uses: actions/setup-java@7a6d8a8234af8eb26422e24e3006232cccaa061b # v4.6.0
+        with:
+          distribution: temurin
+          java-version: 21.0.4
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@0bdd871935719febd78681f197cd39af5b6e16a6 # v4.2.2
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Upload Gradle reports
+        uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5.0
+        if: always()
+        with:
+          name: Gradle reports
+          path: ./server/build/reports
