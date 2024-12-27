@@ -10,7 +10,7 @@ pre-commit:
       tags: web format
       root: web
       glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}'
-      run: pnpm check
+      run: pnpm fix
       stage_fixed: true
     sql-format:
       tags: sql format
