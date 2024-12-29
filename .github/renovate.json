@@ -2,5 +2,47 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "automerge": true,
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom"
+      ],
+      "groupName": "React dependencies"
+    },
+    {
+      "matchPackageNames": [
+        "@generouted/react-router",
+        "react-router"
+      ],
+      "groupName": "Generouted dependencies"
+    },
+    {
+      "matchPackageNames": [
+        "@tanstack/react-query",
+        "@tanstack/react-query-devtools"
+      ],
+      "groupName": "React Query dependencies"
+    },
+    {
+      "matchPackageNames": [
+        "graphql-request",
+        "graphql"
+      ],
+      "groupName": "graphql-request dependencies"
+    },
+    {
+      "matchPackageNames": [
+        "/^@graphql-codegen/",
+        "@graphql-typed-document-node/core",
+        "graphql-codegen-typescript-validation-schema",
+        "@parcel/watcher"
+      ],
+      "groupName": "GraphQL Code Generator dependencies"
+    }
   ]
 }
