@@ -15,7 +15,7 @@ object ArbFixturePluginManager {
         plugins.add(plugin)
     }
 
-    fun findPlugin(type: KType, name: String? = null): ArbFixturePlugin? {
-        return plugins.firstOrNull { it.supports(type, name) }
+    fun findPlugin(type: KType): ArbFixturePlugin? {
+        return plugins.firstOrNull { it.supports(type) }
     }
 }

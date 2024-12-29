@@ -41,15 +41,15 @@ object ArbFixture {
         } ?: constructors.first()
 
         val argumentMap = constructor.parameters.associateWith { parameter ->
-            overrides()[parameter.name] ?: getCustomOrRandomValue(parameter.type, parameter.name)
+            overrides()[parameter.name] ?: getCustomOrRandomValue(parameter.type)
         }
 
         return constructor.callBy(argumentMap)
     }
 
-    private fun getCustomOrRandomValue(type: KType, name: String? = null): Any {
-        val plugin = ArbFixturePluginManager.findPlugin(type, name)
-        return plugin?.generate(type, name) ?: getRandomParameterValue(type)
+    private fun getCustomOrRandomValue(type: KType): Any {
+        val plugin = ArbFixturePluginManager.findPlugin(type)
+        return plugin?.generate() ?: getRandomParameterValue(type)
     }
 
     @Suppress("CyclomaticComplexMethod")
@@ -112,7 +112,7 @@ object ArbFixture {
         val primaryConstructor =
             requireNotNull(classifier.primaryConstructor) { "Data class must have a primary constructor" }
         val params = primaryConstructor.parameters.associateWith { parameter ->
-            getCustomOrRandomValue(parameter.type, parameter.name)
+            getCustomOrRandomValue(parameter.type)
         }
         return primaryConstructor.callBy(params)
     }
@@ -121,7 +121,7 @@ object ArbFixture {
         val primaryConstructor =
             requireNotNull(classifier.primaryConstructor) { "Value class must have a primary constructor" }
         val parameter = primaryConstructor.parameters.first()
-        val paramValue = getCustomOrRandomValue(parameter.type, parameter.name)
+        val paramValue = getCustomOrRandomValue(parameter.type)
         return primaryConstructor.call(paramValue)
     }
 }
