@@ -4,7 +4,7 @@ spring-boot = "3.4.2"
 komapper = "4.0.0"
 kotest = "5.9.1"
 testcontainers = "1.20.4"
-kolin-faker = "2.0.0-rc.7"
+kolin-faker = "2.0.0-rc.8"
 
 [libraries]
 spring-boot-starter-graphql = { group = "org.springframework.boot", name = "spring-boot-starter-graphql" }
