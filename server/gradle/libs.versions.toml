@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.9.23"
-spring-boot = "3.4.1"
+spring-boot = "3.4.2"
 komapper = "4.0.0"
 kotest = "5.9.1"
 testcontainers = "1.20.4"
