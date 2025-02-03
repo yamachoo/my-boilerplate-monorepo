@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@generouted/react-router':
         specifier: ^1.19.9
-        version: 1.19.10(react-router-dom@7.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(vite@6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))
+        version: 1.19.10(react-router-dom@7.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(vite@6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))
       '@tanstack/react-query':
         specifier: ^5.62.10
         version: 5.64.0(react@19.0.0)
@@ -62,7 +62,7 @@ importers:
         version: 19.0.3(@types/react@19.0.8)
       '@vitejs/plugin-react':
         specifier: ^4.3.4
-        version: 4.3.4(vite@6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))
+        version: 4.3.4(vite@6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))
       concurrently:
         specifier: ^9.1.0
         version: 9.1.2
@@ -74,7 +74,7 @@ importers:
         version: 5.7.3
       vite:
         specifier: ^6.0.5
-        version: 6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)
+        version: 6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)
 
 packages:
 
@@ -2231,8 +2231,8 @@ packages:
     resolution: {integrity: sha512-Z6Uz+TYwEqE7ZN50gwn+1LCVo9ZVrpxRPOhOLnncYkY1ZzOYtrX8Fwf/rFktZ8R5mJms6EZf5TqNOMeZmnPq9Q==}
     engines: {node: '>=12'}
 
-  vite@6.0.9:
-    resolution: {integrity: sha512-MSgUxHcaXLtnBPktkbUSoQUANApKYuxZ6DrbVENlIorbhL2dZydTLaZ01tjUoE3szeFzlFk9ANOKk0xurh4MKA==}
+  vite@6.0.11:
+    resolution: {integrity: sha512-4VL9mQPKoHy4+FE0NnRE/kbY51TOfaknxAjt3fJbGJxhIpBZiqVzlZDEesWWsuREXHwNdAoOFZ9MkPEVXczHwg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -2942,13 +2942,13 @@ snapshots:
   '@esbuild/win32-x64@0.24.2':
     optional: true
 
-  '@generouted/react-router@1.19.10(react-router-dom@7.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(vite@6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))':
+  '@generouted/react-router@1.19.10(react-router-dom@7.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(vite@6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))':
     dependencies:
       fast-glob: 3.3.3
-      generouted: 1.19.10(vite@6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))
+      generouted: 1.19.10(vite@6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))
       react: 19.0.0
       react-router-dom: 7.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      vite: 6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)
 
   '@gql.tada/internal@1.0.8(graphql@16.10.0)(typescript@5.7.3)':
     dependencies:
@@ -3645,14 +3645,14 @@ snapshots:
     dependencies:
       '@types/node': 22.13.0
 
-  '@vitejs/plugin-react@4.3.4(vite@6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))':
+  '@vitejs/plugin-react@4.3.4(vite@6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.0)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4061,9 +4061,9 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  generouted@1.19.10(vite@6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)):
+  generouted@1.19.10(vite@6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)):
     dependencies:
-      vite: 6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0)
 
   gensync@1.0.0-beta.2: {}
 
@@ -4767,7 +4767,7 @@ snapshots:
 
   value-or-promise@1.0.12: {}
 
-  vite@6.0.9(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0):
+  vite@6.0.11(@types/node@22.13.0)(jiti@2.4.2)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
