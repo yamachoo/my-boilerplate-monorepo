@@ -44,10 +44,10 @@ importers:
         version: 1.9.4
       '@graphql-codegen/cli':
         specifier: ^5.0.3
-        version: 5.0.4(@babel/core@7.26.7)(@parcel/watcher@2.5.1)(@types/node@22.13.0)(graphql@16.10.0)(typescript@5.7.3)
+        version: 5.0.4(@babel/core@7.26.0)(@parcel/watcher@2.5.1)(@types/node@22.13.0)(graphql@16.10.0)(typescript@5.7.3)
       '@graphql-codegen/client-preset':
         specifier: ^4.5.1
-        version: 4.6.2(@babel/core@7.26.7)(graphql@16.10.0)
+        version: 4.6.2(@babel/core@7.26.0)(graphql@16.10.0)
       '@graphql-typed-document-node/core':
         specifier: ^3.2.0
         version: 3.2.0(graphql@16.10.0)
@@ -68,7 +68,7 @@ importers:
         version: 9.1.2
       graphql-codegen-typescript-validation-schema:
         specifier: ^0.17.0
-        version: 0.17.0(graphql@16.10.0)
+        version: 0.17.1(@babel/core@7.26.0)(graphql@16.10.0)
       typescript:
         specifier: ^5.7.2
         version: 5.7.3
@@ -95,12 +95,6 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
-
-  '@ardatan/relay-compiler@12.0.0':
-    resolution: {integrity: sha512-9anThAaj1dQr6IGmzBMcfzOQKTa5artjuPmw8NYK/fiGEMjADbSguBY2FMDykt+QhilR3wc9VA/3yVju7JHg7Q==}
-    hasBin: true
-    peerDependencies:
-      graphql: '*'
 
   '@ardatan/relay-compiler@12.0.1':
     resolution: {integrity: sha512-q89DkY9HnvsyBRMu5YiYAJUN+B7cST364iCKLzeNqn0BUG3LWez2KfyKTbxPDdqSzGyUmIfUgTm/ThckIReF4g==}
@@ -406,10 +400,6 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
-
-  '@babel/runtime@7.26.0':
-    resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/runtime@7.26.7':
     resolution: {integrity: sha512-AOPI3D+a8dXnja+iwsUqGRjr1BbZIe771sXdapOtYI531gSqpi92vXivKcq2asu/DFpdl1ceFAKZyRzK2PCVcQ==}
@@ -733,12 +723,6 @@ packages:
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  '@graphql-codegen/visitor-plugin-common@5.6.0':
-    resolution: {integrity: sha512-PowcVPJbUqMC9xTJ/ZRX1p/fsdMZREc+69CM1YY+AlFng2lL0zsdBskFJSRoviQk2Ch9IPhKGyHxlJCy9X22tg==}
-    engines: {node: '>=16'}
-    peerDependencies:
-      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-
   '@graphql-codegen/visitor-plugin-common@5.6.1':
     resolution: {integrity: sha512-q+DkGWWS7pvSc1c4Hw1xD0RI+EplTe2PCyTCT0WuaswnodBytteKTqFOVVGadISLX0xhO25aANTFB4+TLwTBSA==}
     engines: {node: '>=16'}
@@ -871,14 +855,8 @@ packages:
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
-  '@graphql-tools/relay-operation-optimizer@7.0.12':
-    resolution: {integrity: sha512-4gSefj8ZiNAtf7AZyvVMg5RHxyZnMuoDMdjWGAcIyJNOOzQ1aBSc2aFEhk94mGFbQLXdLoBSrsAhYyFGdsej6w==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
-
-  '@graphql-tools/relay-operation-optimizer@7.0.9':
-    resolution: {integrity: sha512-VF+0kn+j1zAgVsN5abzoERDqx4vsGBkQ+5urhJV6gvRJTDm4sd72+ccZEhES7GPflxAgtYeL2fQNWgign5Ieag==}
+  '@graphql-tools/relay-operation-optimizer@7.0.14':
+    resolution: {integrity: sha512-sHrWbqwXxiYq10stPuFEGjDTz/BQbf+ujfW3xcm5hpkSJp3LjwdFFmFaQU42w3xYWLszbp7lR29dYnhCWpegJA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
@@ -895,14 +873,14 @@ packages:
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
-  '@graphql-tools/utils@10.7.0':
-    resolution: {integrity: sha512-tCO0cZsnioXJBcN7geeER50PRZaKTq1zsSBg/aXe+u/ZkTiEyj6Hyu4Co39SNeG0mURoS2jhxsG03eYjTxloIg==}
+  '@graphql-tools/utils@10.7.2':
+    resolution: {integrity: sha512-Wn85S+hfkzfVFpXVrQ0hjnePa3p28aB6IdAGCiD1SqBCSMDRzL+OFEtyAyb30nV9Mqflqs9lCqjqlR2puG857Q==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
-  '@graphql-tools/utils@10.7.2':
-    resolution: {integrity: sha512-Wn85S+hfkzfVFpXVrQ0hjnePa3p28aB6IdAGCiD1SqBCSMDRzL+OFEtyAyb30nV9Mqflqs9lCqjqlR2puG857Q==}
+  '@graphql-tools/utils@10.8.1':
+    resolution: {integrity: sha512-fI5NNuqeEAHyp7NuCDjvxWR5PTUXM4AqY9BoC59ZcX4nePAJje27ZsFHbAMS6EKDosY1K/D4ADxsO0P5+FH07A==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
@@ -1253,9 +1231,6 @@ packages:
   bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
 
-  brace-expansion@1.1.11:
-    resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
-
   brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
 
@@ -1289,10 +1264,6 @@ packages:
 
   camel-case@4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
-
-  camelcase@5.3.1:
-    resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
-    engines: {node: '>=6'}
 
   caniuse-lite@1.0.30001690:
     resolution: {integrity: sha512-5ExiE3qQN6oF8Clf8ifIDcMRCRE/dMGcETG/XGMD8/XiXm6HXQgQTh1yZYLXXpSOsEUlJm1Xr7kGULZTuGtP/w==}
@@ -1336,9 +1307,6 @@ packages:
     resolution: {integrity: sha512-FxqpkPPwu1HjuN93Omfm4h8uIanXofW0RxVEW3k5RKx+mJJYSthzNhp32Kzxxy3YAEZ/Dc/EWN1vZRY0+kOhbw==}
     engines: {node: '>= 10'}
 
-  cliui@6.0.0:
-    resolution: {integrity: sha512-t6wbgtoCXvAzst7QgXxJYqPt0usEfbgQdftEPbLL/cvv6HPE5VgvqCuAIDR0NgU52ds6rFwqrgakNLrHEjCbrQ==}
-
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
@@ -1360,9 +1328,6 @@ packages:
   common-tags@1.8.2:
     resolution: {integrity: sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==}
     engines: {node: '>=4.0.0'}
-
-  concat-map@0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   concurrently@9.1.2:
     resolution: {integrity: sha512-H9MWcoPsYddwbOGM6difjVwVZHl63nwMEwDJG/L7VGtuaJhb12h2caPG2tVPWs7emuYix252iGfqOyrz1GczTQ==}
@@ -1416,10 +1381,6 @@ packages:
     peerDependenciesMeta:
       supports-color:
         optional: true
-
-  decamelize@1.2.0:
-    resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
-    engines: {node: '>=0.10.0'}
 
   defaults@1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
@@ -1513,16 +1474,9 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
-  find-up@4.1.0:
-    resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
-    engines: {node: '>=8'}
-
   formdata-polyfill@4.0.10:
     resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
     engines: {node: '>=12.20.0'}
-
-  fs.realpath@1.0.0:
-    resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -1546,10 +1500,6 @@ packages:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
 
-  glob@7.2.3:
-    resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
-
   globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
@@ -1561,8 +1511,8 @@ packages:
   graphlib@2.1.8:
     resolution: {integrity: sha512-jcLLfkpoVGmH7/InMC/1hIvOPSUh38oJtGhvrOFGzioE1DZ+0YW16RgmOJhHiuWTvGiJQ9Z1Ik43JvkRPRvE+A==}
 
-  graphql-codegen-typescript-validation-schema@0.17.0:
-    resolution: {integrity: sha512-W3EKoJGJgFJFHyrkAkSsm+ImC4PJeOR0+p6s5TE+n5kEagzq9cHrdQSOvrfzKJM7tcP+EpTrZ3nI+kXIxPbvMA==}
+  graphql-codegen-typescript-validation-schema@0.17.1:
+    resolution: {integrity: sha512-OEpX6iuo+mEJrfI/GoGwIs5qr3Gv2go+VzxSyIPtVI2ix5akZlukcOcZmk5gTEBytdVKROAxkYP2qravaQZN6w==}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
@@ -1643,10 +1593,6 @@ packages:
   indent-string@4.0.0:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
     engines: {node: '>=8'}
-
-  inflight@1.0.6:
-    resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
-    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -1759,10 +1705,6 @@ packages:
       enquirer:
         optional: true
 
-  locate-path@5.0.0:
-    resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
-    engines: {node: '>=8'}
-
   lodash.sortby@4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
 
@@ -1814,9 +1756,6 @@ packages:
   mimic-fn@2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
-
-  minimatch@3.1.2:
-    resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
   minimatch@9.0.5:
     resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
@@ -1873,9 +1812,6 @@ packages:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
 
-  once@1.4.0:
-    resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
-
   onetime@5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
     engines: {node: '>=6'}
@@ -1888,25 +1824,13 @@ packages:
     resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
     engines: {node: '>=0.10.0'}
 
-  p-limit@2.3.0:
-    resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
-    engines: {node: '>=6'}
-
   p-limit@3.1.0:
     resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
     engines: {node: '>=10'}
 
-  p-locate@4.1.0:
-    resolution: {integrity: sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==}
-    engines: {node: '>=8'}
-
   p-map@4.0.0:
     resolution: {integrity: sha512-/bjOqmgETBYB5BoEeGVea8dmvHb2m9GLy1E9W43yeyfP6QQCZGFNa+XRceJEuDB6zqr+gKpIAmlLebMpykw/MQ==}
     engines: {node: '>=10'}
-
-  p-try@2.2.0:
-    resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
-    engines: {node: '>=6'}
 
   param-case@3.0.4:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
@@ -1928,14 +1852,6 @@ packages:
 
   path-case@3.0.4:
     resolution: {integrity: sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg==}
-
-  path-exists@4.0.0:
-    resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
-    engines: {node: '>=8'}
-
-  path-is-absolute@1.0.1:
-    resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
-    engines: {node: '>=0.10.0'}
 
   path-root-regex@0.1.2:
     resolution: {integrity: sha512-4GlJ6rZDhQZFE0DPVKh0e9jmZ5egZfxTkp7bcRDuPlJXbAwhxcl2dINPUAsjLdejqaLsCeg8axcLjIbvBjN4pQ==}
@@ -2012,9 +1928,6 @@ packages:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
 
-  require-main-filename@2.0.0:
-    resolution: {integrity: sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==}
-
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -2067,9 +1980,6 @@ packages:
 
   sentence-case@3.0.4:
     resolution: {integrity: sha512-8LS0JInaQMCRoQ7YUytAo/xUu5W2XnQxV2HI/6uM6U7CITS1RqPElr30V6uIqyMKM9lJGRVFy5/4CuzcixNYSg==}
-
-  set-blocking@2.0.0:
-    resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
   set-cookie-parser@2.7.1:
     resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
@@ -2296,9 +2206,6 @@ packages:
   whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
 
-  which-module@2.0.1:
-    resolution: {integrity: sha512-iBdZ57RDvnOR9AGBhML2vFZf7h8vmBjhoaZqODJBFWHVtKkDmKuHai3cx5PgVMrX5YDNp27AofYbAwctSS+vhQ==}
-
   wrap-ansi@6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
     engines: {node: '>=8'}
@@ -2306,9 +2213,6 @@ packages:
   wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
     engines: {node: '>=10'}
-
-  wrappy@1.0.2:
-    resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
   ws@8.18.0:
     resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
@@ -2321,9 +2225,6 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
-
-  y18n@4.0.3:
-    resolution: {integrity: sha512-JKhqTOwSrqNA1NY5lSztJ1GrBiUodLMmIZuLiDaMRJ+itFd+ABVE8XBjOvIWL+rSqNDC74LCSFmlb/U4UZ4hJQ==}
 
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
@@ -2340,17 +2241,9 @@ packages:
     engines: {node: '>= 14'}
     hasBin: true
 
-  yargs-parser@18.1.3:
-    resolution: {integrity: sha512-o50j0JeToy/4K6OZcaQmW6lyXXKhq7csREXcDwk2omFPJEwUNOVtJKvmDr9EI1fAJZUyZcRF7kxGBWmRXudrCQ==}
-    engines: {node: '>=6'}
-
   yargs-parser@21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
     engines: {node: '>=12'}
-
-  yargs@15.4.1:
-    resolution: {integrity: sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==}
-    engines: {node: '>=8'}
 
   yargs@17.7.2:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
@@ -2377,36 +2270,12 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@ardatan/relay-compiler@12.0.0(graphql@16.10.0)':
-    dependencies:
-      '@babel/core': 7.26.7
-      '@babel/generator': 7.26.5
-      '@babel/parser': 7.26.8
-      '@babel/runtime': 7.26.0
-      '@babel/traverse': 7.26.7
-      '@babel/types': 7.26.8
-      babel-preset-fbjs: 3.4.0(@babel/core@7.26.7)
-      chalk: 4.1.2
-      fb-watchman: 2.0.2
-      fbjs: 3.0.5
-      glob: 7.2.3
-      graphql: 16.10.0
-      immutable: 3.7.6
-      invariant: 2.2.4
-      nullthrows: 1.1.1
-      relay-runtime: 12.0.0
-      signedsource: 1.0.0
-      yargs: 15.4.1
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-
-  '@ardatan/relay-compiler@12.0.1(@babel/core@7.26.7)(graphql@16.10.0)':
+  '@ardatan/relay-compiler@12.0.1(@babel/core@7.26.0)(graphql@16.10.0)':
     dependencies:
       '@babel/generator': 7.26.8
       '@babel/parser': 7.26.8
       '@babel/runtime': 7.26.7
-      babel-preset-fbjs: 3.4.0(@babel/core@7.26.7)
+      babel-preset-fbjs: 3.4.0(@babel/core@7.26.0)
       chalk: 4.1.2
       fb-watchman: 2.0.2
       fbjs: 3.0.5
@@ -2517,13 +2386,13 @@ snapshots:
       lru-cache: 5.1.1
       semver: 6.3.1
 
-  '@babel/helper-create-class-features-plugin@7.25.9(@babel/core@7.26.7)':
+  '@babel/helper-create-class-features-plugin@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-annotate-as-pure': 7.25.9
       '@babel/helper-member-expression-to-functions': 7.25.9
       '@babel/helper-optimise-call-expression': 7.25.9
-      '@babel/helper-replace-supers': 7.26.5(@babel/core@7.26.7)
+      '@babel/helper-replace-supers': 7.26.5(@babel/core@7.26.0)
       '@babel/helper-skip-transparent-expression-wrappers': 7.25.9
       '@babel/traverse': 7.26.8
       semver: 6.3.1
@@ -2570,9 +2439,9 @@ snapshots:
 
   '@babel/helper-plugin-utils@7.26.5': {}
 
-  '@babel/helper-replace-supers@7.26.5(@babel/core@7.26.7)':
+  '@babel/helper-replace-supers@7.26.5(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-member-expression-to-functions': 7.25.9
       '@babel/helper-optimise-call-expression': 7.25.9
       '@babel/traverse': 7.26.8
@@ -2614,31 +2483,31 @@ snapshots:
     dependencies:
       '@babel/types': 7.26.8
 
-  '@babel/plugin-proposal-class-properties@7.18.6(@babel/core@7.26.7)':
+  '@babel/plugin-proposal-class-properties@7.18.6(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
-      '@babel/helper-create-class-features-plugin': 7.25.9(@babel/core@7.26.7)
+      '@babel/core': 7.26.0
+      '@babel/helper-create-class-features-plugin': 7.25.9(@babel/core@7.26.0)
       '@babel/helper-plugin-utils': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-proposal-object-rest-spread@7.20.7(@babel/core@7.26.7)':
+  '@babel/plugin-proposal-object-rest-spread@7.20.7(@babel/core@7.26.0)':
     dependencies:
       '@babel/compat-data': 7.26.8
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-compilation-targets': 7.26.5
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.26.7)
-      '@babel/plugin-transform-parameters': 7.25.9(@babel/core@7.26.7)
+      '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.26.0)
+      '@babel/plugin-transform-parameters': 7.25.9(@babel/core@7.26.0)
 
-  '@babel/plugin-syntax-class-properties@7.12.13(@babel/core@7.26.7)':
+  '@babel/plugin-syntax-class-properties@7.12.13(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.7)':
+  '@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-syntax-import-assertions@7.26.0(@babel/core@7.26.7)':
@@ -2646,116 +2515,116 @@ snapshots:
       '@babel/core': 7.26.7
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-syntax-jsx@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-syntax-jsx@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-syntax-object-rest-spread@7.8.3(@babel/core@7.26.7)':
+  '@babel/plugin-syntax-object-rest-spread@7.8.3(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-arrow-functions@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-arrow-functions@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-block-scoped-functions@7.26.5(@babel/core@7.26.7)':
+  '@babel/plugin-transform-block-scoped-functions@7.26.5(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-block-scoping@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-block-scoping@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-classes@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-classes@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-annotate-as-pure': 7.25.9
       '@babel/helper-compilation-targets': 7.26.5
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/helper-replace-supers': 7.26.5(@babel/core@7.26.7)
+      '@babel/helper-replace-supers': 7.26.5(@babel/core@7.26.0)
       '@babel/traverse': 7.26.8
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-computed-properties@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-computed-properties@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/template': 7.26.8
 
-  '@babel/plugin-transform-destructuring@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-destructuring@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-flow-strip-types@7.26.5(@babel/core@7.26.7)':
+  '@babel/plugin-transform-flow-strip-types@7.26.5(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/plugin-syntax-flow': 7.26.0(@babel/core@7.26.7)
+      '@babel/plugin-syntax-flow': 7.26.0(@babel/core@7.26.0)
 
-  '@babel/plugin-transform-for-of@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-for-of@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/helper-skip-transparent-expression-wrappers': 7.25.9
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-function-name@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-function-name@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-compilation-targets': 7.26.5
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/traverse': 7.26.8
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-literals@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-literals@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-member-expression-literals@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-member-expression-literals@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-modules-commonjs@7.26.3(@babel/core@7.26.7)':
+  '@babel/plugin-transform-modules-commonjs@7.26.3(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
-      '@babel/helper-module-transforms': 7.26.0(@babel/core@7.26.7)
+      '@babel/core': 7.26.0
+      '@babel/helper-module-transforms': 7.26.0(@babel/core@7.26.0)
       '@babel/helper-plugin-utils': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-object-super@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-object-super@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/helper-replace-supers': 7.26.5(@babel/core@7.26.7)
+      '@babel/helper-replace-supers': 7.26.5(@babel/core@7.26.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-parameters@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-parameters@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-property-literals@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-property-literals@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-react-display-name@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-react-display-name@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
   '@babel/plugin-transform-react-jsx-self@7.25.9(@babel/core@7.26.0)':
@@ -2768,38 +2637,34 @@ snapshots:
       '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.25.9
 
-  '@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-annotate-as-pure': 7.25.9
       '@babel/helper-module-imports': 7.25.9
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.7)
+      '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.0)
       '@babel/types': 7.26.8
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-shorthand-properties@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-shorthand-properties@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
 
-  '@babel/plugin-transform-spread@7.25.9(@babel/core@7.26.7)':
+  '@babel/plugin-transform-spread@7.25.9(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/helper-skip-transparent-expression-wrappers': 7.25.9
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-template-literals@7.26.8(@babel/core@7.26.7)':
+  '@babel/plugin-transform-template-literals@7.26.8(@babel/core@7.26.0)':
     dependencies:
-      '@babel/core': 7.26.7
+      '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
-
-  '@babel/runtime@7.26.0':
-    dependencies:
-      regenerator-runtime: 0.14.1
 
   '@babel/runtime@7.26.7':
     dependencies:
@@ -3007,12 +2872,12 @@ snapshots:
       graphql: 16.10.0
       tslib: 2.6.3
 
-  '@graphql-codegen/cli@5.0.4(@babel/core@7.26.7)(@parcel/watcher@2.5.1)(@types/node@22.13.0)(graphql@16.10.0)(typescript@5.7.3)':
+  '@graphql-codegen/cli@5.0.4(@babel/core@7.26.0)(@parcel/watcher@2.5.1)(@types/node@22.13.0)(graphql@16.10.0)(typescript@5.7.3)':
     dependencies:
       '@babel/generator': 7.26.5
       '@babel/template': 7.25.9
       '@babel/types': 7.26.7
-      '@graphql-codegen/client-preset': 4.6.2(@babel/core@7.26.7)(graphql@16.10.0)
+      '@graphql-codegen/client-preset': 4.6.2(@babel/core@7.26.0)(graphql@16.10.0)
       '@graphql-codegen/core': 4.0.2(graphql@16.10.0)
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
       '@graphql-tools/apollo-engine-loader': 8.0.13(graphql@16.10.0)
@@ -3058,17 +2923,17 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@graphql-codegen/client-preset@4.6.2(@babel/core@7.26.7)(graphql@16.10.0)':
+  '@graphql-codegen/client-preset@4.6.2(@babel/core@7.26.0)(graphql@16.10.0)':
     dependencies:
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/template': 7.26.8
       '@graphql-codegen/add': 5.0.3(graphql@16.10.0)
-      '@graphql-codegen/gql-tag-operations': 4.0.14(@babel/core@7.26.7)(graphql@16.10.0)
+      '@graphql-codegen/gql-tag-operations': 4.0.14(@babel/core@7.26.0)(graphql@16.10.0)
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
-      '@graphql-codegen/typed-document-node': 5.0.13(@babel/core@7.26.7)(graphql@16.10.0)
-      '@graphql-codegen/typescript': 4.1.3(@babel/core@7.26.7)(graphql@16.10.0)
-      '@graphql-codegen/typescript-operations': 4.4.1(@babel/core@7.26.7)(graphql@16.10.0)
-      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.7)(graphql@16.10.0)
+      '@graphql-codegen/typed-document-node': 5.0.13(@babel/core@7.26.0)(graphql@16.10.0)
+      '@graphql-codegen/typescript': 4.1.3(@babel/core@7.26.0)(graphql@16.10.0)
+      '@graphql-codegen/typescript-operations': 4.4.1(@babel/core@7.26.0)(graphql@16.10.0)
+      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.0)(graphql@16.10.0)
       '@graphql-tools/documents': 1.0.1(graphql@16.10.0)
       '@graphql-tools/utils': 10.7.2(graphql@16.10.0)
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
@@ -3087,10 +2952,10 @@ snapshots:
       graphql: 16.10.0
       tslib: 2.6.3
 
-  '@graphql-codegen/gql-tag-operations@4.0.14(@babel/core@7.26.7)(graphql@16.10.0)':
+  '@graphql-codegen/gql-tag-operations@4.0.14(@babel/core@7.26.0)(graphql@16.10.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
-      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.7)(graphql@16.10.0)
+      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.0)(graphql@16.10.0)
       '@graphql-tools/utils': 10.7.2(graphql@16.10.0)
       auto-bind: 4.0.0
       graphql: 16.10.0
@@ -3102,7 +2967,7 @@ snapshots:
 
   '@graphql-codegen/plugin-helpers@5.1.0(graphql@16.10.0)':
     dependencies:
-      '@graphql-tools/utils': 10.7.2(graphql@16.10.0)
+      '@graphql-tools/utils': 10.8.1(graphql@16.10.0)
       change-case-all: 1.0.15
       common-tags: 1.8.2
       graphql: 16.10.0
@@ -3113,14 +2978,14 @@ snapshots:
   '@graphql-codegen/schema-ast@4.1.0(graphql@16.10.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
-      '@graphql-tools/utils': 10.7.0(graphql@16.10.0)
+      '@graphql-tools/utils': 10.8.1(graphql@16.10.0)
       graphql: 16.10.0
       tslib: 2.6.3
 
-  '@graphql-codegen/typed-document-node@5.0.13(@babel/core@7.26.7)(graphql@16.10.0)':
+  '@graphql-codegen/typed-document-node@5.0.13(@babel/core@7.26.0)(graphql@16.10.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
-      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.7)(graphql@16.10.0)
+      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.0)(graphql@16.10.0)
       auto-bind: 4.0.0
       change-case-all: 1.0.15
       graphql: 16.10.0
@@ -3130,11 +2995,11 @@ snapshots:
       - encoding
       - supports-color
 
-  '@graphql-codegen/typescript-operations@4.4.1(@babel/core@7.26.7)(graphql@16.10.0)':
+  '@graphql-codegen/typescript-operations@4.4.1(@babel/core@7.26.0)(graphql@16.10.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
-      '@graphql-codegen/typescript': 4.1.3(@babel/core@7.26.7)(graphql@16.10.0)
-      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.7)(graphql@16.10.0)
+      '@graphql-codegen/typescript': 4.1.3(@babel/core@7.26.0)(graphql@16.10.0)
+      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.0)(graphql@16.10.0)
       auto-bind: 4.0.0
       graphql: 16.10.0
       tslib: 2.6.3
@@ -3143,11 +3008,11 @@ snapshots:
       - encoding
       - supports-color
 
-  '@graphql-codegen/typescript@4.1.3(@babel/core@7.26.7)(graphql@16.10.0)':
+  '@graphql-codegen/typescript@4.1.3(@babel/core@7.26.0)(graphql@16.10.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
       '@graphql-codegen/schema-ast': 4.1.0(graphql@16.10.0)
-      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.7)(graphql@16.10.0)
+      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.0)(graphql@16.10.0)
       auto-bind: 4.0.0
       graphql: 16.10.0
       tslib: 2.6.3
@@ -3156,29 +3021,12 @@ snapshots:
       - encoding
       - supports-color
 
-  '@graphql-codegen/visitor-plugin-common@5.6.0(graphql@16.10.0)':
+  '@graphql-codegen/visitor-plugin-common@5.6.1(@babel/core@7.26.0)(graphql@16.10.0)':
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
       '@graphql-tools/optimize': 2.0.0(graphql@16.10.0)
-      '@graphql-tools/relay-operation-optimizer': 7.0.9(graphql@16.10.0)
-      '@graphql-tools/utils': 10.7.0(graphql@16.10.0)
-      auto-bind: 4.0.0
-      change-case-all: 1.0.15
-      dependency-graph: 0.11.0
-      graphql: 16.10.0
-      graphql-tag: 2.12.6(graphql@16.10.0)
-      parse-filepath: 1.0.2
-      tslib: 2.6.3
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-
-  '@graphql-codegen/visitor-plugin-common@5.6.1(@babel/core@7.26.7)(graphql@16.10.0)':
-    dependencies:
-      '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
-      '@graphql-tools/optimize': 2.0.0(graphql@16.10.0)
-      '@graphql-tools/relay-operation-optimizer': 7.0.12(@babel/core@7.26.7)(graphql@16.10.0)
-      '@graphql-tools/utils': 10.7.2(graphql@16.10.0)
+      '@graphql-tools/relay-operation-optimizer': 7.0.14(@babel/core@7.26.0)(graphql@16.10.0)
+      '@graphql-tools/utils': 10.8.1(graphql@16.10.0)
       auto-bind: 4.0.0
       change-case-all: 1.0.15
       dependency-graph: 0.11.0
@@ -3407,24 +3255,14 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@graphql-tools/relay-operation-optimizer@7.0.12(@babel/core@7.26.7)(graphql@16.10.0)':
+  '@graphql-tools/relay-operation-optimizer@7.0.14(@babel/core@7.26.0)(graphql@16.10.0)':
     dependencies:
-      '@ardatan/relay-compiler': 12.0.1(@babel/core@7.26.7)(graphql@16.10.0)
-      '@graphql-tools/utils': 10.7.2(graphql@16.10.0)
+      '@ardatan/relay-compiler': 12.0.1(@babel/core@7.26.0)(graphql@16.10.0)
+      '@graphql-tools/utils': 10.8.1(graphql@16.10.0)
       graphql: 16.10.0
       tslib: 2.6.3
     transitivePeerDependencies:
       - '@babel/core'
-      - encoding
-      - supports-color
-
-  '@graphql-tools/relay-operation-optimizer@7.0.9(graphql@16.10.0)':
-    dependencies:
-      '@ardatan/relay-compiler': 12.0.0(graphql@16.10.0)
-      '@graphql-tools/utils': 10.7.0(graphql@16.10.0)
-      graphql: 16.10.0
-      tslib: 2.6.3
-    transitivePeerDependencies:
       - encoding
       - supports-color
 
@@ -3456,14 +3294,6 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@graphql-tools/utils@10.7.0(graphql@16.10.0)':
-    dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
-      cross-inspect: 1.0.1
-      dset: 3.1.4
-      graphql: 16.10.0
-      tslib: 2.8.1
-
   '@graphql-tools/utils@10.7.2(graphql@16.10.0)':
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
@@ -3471,6 +3301,14 @@ snapshots:
       dset: 3.1.4
       graphql: 16.10.0
       tslib: 2.6.3
+
+  '@graphql-tools/utils@10.8.1(graphql@16.10.0)':
+    dependencies:
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
+      cross-inspect: 1.0.1
+      dset: 3.1.4
+      graphql: 16.10.0
+      tslib: 2.8.1
 
   '@graphql-tools/wrap@10.0.29(graphql@16.10.0)':
     dependencies:
@@ -3745,35 +3583,35 @@ snapshots:
 
   babel-plugin-syntax-trailing-function-commas@7.0.0-beta.0: {}
 
-  babel-preset-fbjs@3.4.0(@babel/core@7.26.7):
+  babel-preset-fbjs@3.4.0(@babel/core@7.26.0):
     dependencies:
-      '@babel/core': 7.26.7
-      '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.26.7)
-      '@babel/plugin-proposal-object-rest-spread': 7.20.7(@babel/core@7.26.7)
-      '@babel/plugin-syntax-class-properties': 7.12.13(@babel/core@7.26.7)
-      '@babel/plugin-syntax-flow': 7.26.0(@babel/core@7.26.7)
-      '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.26.7)
-      '@babel/plugin-transform-arrow-functions': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-block-scoped-functions': 7.26.5(@babel/core@7.26.7)
-      '@babel/plugin-transform-block-scoping': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-classes': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-computed-properties': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-destructuring': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-flow-strip-types': 7.26.5(@babel/core@7.26.7)
-      '@babel/plugin-transform-for-of': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-function-name': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-literals': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-member-expression-literals': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-modules-commonjs': 7.26.3(@babel/core@7.26.7)
-      '@babel/plugin-transform-object-super': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-parameters': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-property-literals': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-react-display-name': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-shorthand-properties': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-spread': 7.25.9(@babel/core@7.26.7)
-      '@babel/plugin-transform-template-literals': 7.26.8(@babel/core@7.26.7)
+      '@babel/core': 7.26.0
+      '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.26.0)
+      '@babel/plugin-proposal-object-rest-spread': 7.20.7(@babel/core@7.26.0)
+      '@babel/plugin-syntax-class-properties': 7.12.13(@babel/core@7.26.0)
+      '@babel/plugin-syntax-flow': 7.26.0(@babel/core@7.26.0)
+      '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.26.0)
+      '@babel/plugin-transform-arrow-functions': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-block-scoped-functions': 7.26.5(@babel/core@7.26.0)
+      '@babel/plugin-transform-block-scoping': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-classes': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-computed-properties': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-destructuring': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-flow-strip-types': 7.26.5(@babel/core@7.26.0)
+      '@babel/plugin-transform-for-of': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-function-name': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-literals': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-member-expression-literals': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-modules-commonjs': 7.26.3(@babel/core@7.26.0)
+      '@babel/plugin-transform-object-super': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-parameters': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-property-literals': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-react-display-name': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-shorthand-properties': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-spread': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-template-literals': 7.26.8(@babel/core@7.26.0)
       babel-plugin-syntax-trailing-function-commas: 7.0.0-beta.0
     transitivePeerDependencies:
       - supports-color
@@ -3787,11 +3625,6 @@ snapshots:
       buffer: 5.7.1
       inherits: 2.0.4
       readable-stream: 3.6.2
-
-  brace-expansion@1.1.11:
-    dependencies:
-      balanced-match: 1.0.2
-      concat-map: 0.0.1
 
   brace-expansion@2.0.1:
     dependencies:
@@ -3834,8 +3667,6 @@ snapshots:
     dependencies:
       pascal-case: 3.1.2
       tslib: 2.6.3
-
-  camelcase@5.3.1: {}
 
   caniuse-lite@1.0.30001690: {}
 
@@ -3897,12 +3728,6 @@ snapshots:
 
   cli-width@3.0.0: {}
 
-  cliui@6.0.0:
-    dependencies:
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      wrap-ansi: 6.2.0
-
   cliui@8.0.1:
     dependencies:
       string-width: 4.2.3
@@ -3920,8 +3745,6 @@ snapshots:
   colorette@2.0.20: {}
 
   common-tags@1.8.2: {}
-
-  concat-map@0.0.1: {}
 
   concurrently@9.1.2:
     dependencies:
@@ -3973,8 +3796,6 @@ snapshots:
   debug@4.4.0:
     dependencies:
       ms: 2.1.3
-
-  decamelize@1.2.0: {}
 
   defaults@1.0.4:
     dependencies:
@@ -4092,16 +3913,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  find-up@4.1.0:
-    dependencies:
-      locate-path: 5.0.0
-      path-exists: 4.0.0
-
   formdata-polyfill@4.0.10:
     dependencies:
       fetch-blob: 3.2.0
-
-  fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
     optional: true
@@ -4118,15 +3932,6 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
-  glob@7.2.3:
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 3.1.2
-      once: 1.4.0
-      path-is-absolute: 1.0.1
-
   globals@11.12.0: {}
 
   globby@11.1.0:
@@ -4142,15 +3947,16 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
-  graphql-codegen-typescript-validation-schema@0.17.0(graphql@16.10.0):
+  graphql-codegen-typescript-validation-schema@0.17.1(@babel/core@7.26.0)(graphql@16.10.0):
     dependencies:
       '@graphql-codegen/plugin-helpers': 5.1.0(graphql@16.10.0)
       '@graphql-codegen/schema-ast': 4.1.0(graphql@16.10.0)
-      '@graphql-codegen/visitor-plugin-common': 5.6.0(graphql@16.10.0)
-      '@graphql-tools/utils': 10.7.0(graphql@16.10.0)
+      '@graphql-codegen/visitor-plugin-common': 5.6.1(@babel/core@7.26.0)(graphql@16.10.0)
+      '@graphql-tools/utils': 10.8.1(graphql@16.10.0)
       graphlib: 2.1.8
       graphql: 16.10.0
     transitivePeerDependencies:
+      - '@babel/core'
       - encoding
       - supports-color
 
@@ -4237,11 +4043,6 @@ snapshots:
   import-from@4.0.0: {}
 
   indent-string@4.0.0: {}
-
-  inflight@1.0.6:
-    dependencies:
-      once: 1.4.0
-      wrappy: 1.0.2
 
   inherits@2.0.4: {}
 
@@ -4346,10 +4147,6 @@ snapshots:
       through: 2.3.8
       wrap-ansi: 7.0.0
 
-  locate-path@5.0.0:
-    dependencies:
-      p-locate: 4.1.0
-
   lodash.sortby@4.7.0: {}
 
   lodash@4.17.21: {}
@@ -4397,10 +4194,6 @@ snapshots:
 
   mimic-fn@2.1.0: {}
 
-  minimatch@3.1.2:
-    dependencies:
-      brace-expansion: 1.1.11
-
   minimatch@9.0.5:
     dependencies:
       brace-expansion: 2.0.1
@@ -4442,10 +4235,6 @@ snapshots:
 
   object-assign@4.1.1: {}
 
-  once@1.4.0:
-    dependencies:
-      wrappy: 1.0.2
-
   onetime@5.1.2:
     dependencies:
       mimic-fn: 2.1.0
@@ -4464,23 +4253,13 @@ snapshots:
 
   os-tmpdir@1.0.2: {}
 
-  p-limit@2.3.0:
-    dependencies:
-      p-try: 2.2.0
-
   p-limit@3.1.0:
     dependencies:
       yocto-queue: 0.1.0
 
-  p-locate@4.1.0:
-    dependencies:
-      p-limit: 2.3.0
-
   p-map@4.0.0:
     dependencies:
       aggregate-error: 3.1.0
-
-  p-try@2.2.0: {}
 
   param-case@3.0.4:
     dependencies:
@@ -4513,10 +4292,6 @@ snapshots:
     dependencies:
       dot-case: 3.0.4
       tslib: 2.6.3
-
-  path-exists@4.0.0: {}
-
-  path-is-absolute@1.0.1: {}
 
   path-root-regex@0.1.2: {}
 
@@ -4585,8 +4360,6 @@ snapshots:
 
   require-directory@2.1.1: {}
 
-  require-main-filename@2.0.0: {}
-
   resolve-from@4.0.0: {}
 
   resolve-from@5.0.0: {}
@@ -4650,8 +4423,6 @@ snapshots:
       no-case: 3.0.4
       tslib: 2.6.3
       upper-case-first: 2.0.2
-
-  set-blocking@2.0.0: {}
 
   set-cookie-parser@2.7.1: {}
 
@@ -4822,8 +4593,6 @@ snapshots:
       tr46: 0.0.3
       webidl-conversions: 3.0.1
 
-  which-module@2.0.1: {}
-
   wrap-ansi@6.2.0:
     dependencies:
       ansi-styles: 4.3.0
@@ -4836,11 +4605,7 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
-  wrappy@1.0.2: {}
-
   ws@8.18.0: {}
-
-  y18n@4.0.3: {}
 
   y18n@5.0.8: {}
 
@@ -4850,26 +4615,7 @@ snapshots:
 
   yaml@2.7.0: {}
 
-  yargs-parser@18.1.3:
-    dependencies:
-      camelcase: 5.3.1
-      decamelize: 1.2.0
-
   yargs-parser@21.1.1: {}
-
-  yargs@15.4.1:
-    dependencies:
-      cliui: 6.0.0
-      decamelize: 1.2.0
-      find-up: 4.1.0
-      get-caller-file: 2.0.5
-      require-directory: 2.1.1
-      require-main-filename: 2.0.0
-      set-blocking: 2.0.0
-      string-width: 4.2.3
-      which-module: 2.0.1
-      y18n: 4.0.3
-      yargs-parser: 18.1.3
 
   yargs@17.7.2:
     dependencies:
