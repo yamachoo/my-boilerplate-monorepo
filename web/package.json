@@ -21,7 +21,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.1.1",
-    "valibot": "^0.42.1"
+    "valibot": "^1.0.0"
   },
   "devDependencies": {
     "@0no-co/graphqlsp": "^1.12.16",
