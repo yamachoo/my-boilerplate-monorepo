@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@generouted/react-router':
         specifier: ^1.19.9
-        version: 1.20.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(yaml@2.7.1))
+        version: 1.20.0(react-router@7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(yaml@2.7.1))
       '@tanstack/react-query':
         specifier: ^5.62.10
         version: 5.77.0(react@19.1.0)
@@ -31,7 +31,7 @@ importers:
         version: 19.1.0(react@19.1.0)
       react-router:
         specifier: ^7.1.1
-        version: 7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       valibot:
         specifier: ^1.0.0
         version: 1.1.0(typescript@5.8.3)
@@ -1675,8 +1675,8 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router@7.6.0:
-    resolution: {integrity: sha512-GGufuHIVCJDbnIAXP3P9Sxzq3UUsddG3rrI3ut1q6m0FI6vxVBF3JoPQ38+W/blslLH4a5Yutp8drkEpXoddGQ==}
+  react-router@7.6.1:
+    resolution: {integrity: sha512-hPJXXxHJZEsPFNVbtATH7+MMX43UDeOauz+EAU4cgqTn7ojdI9qQORqS8Z0qmDlL1TclO/6jLRYUEtbWidtdHQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -2303,12 +2303,12 @@ snapshots:
 
   '@fastify/busboy@3.1.1': {}
 
-  '@generouted/react-router@1.20.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(yaml@2.7.1))':
+  '@generouted/react-router@1.20.0(react-router@7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(yaml@2.7.1))':
     dependencies:
       fast-glob: 3.3.3
       generouted: 1.20.0(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(yaml@2.7.1))
       react: 19.1.0
-      react-router: 7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-router: 7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       vite: 6.3.5(@types/node@22.15.14)(jiti@2.4.2)(yaml@2.7.1)
 
   '@gql.tada/internal@1.0.8(graphql@16.11.0)(typescript@5.8.3)':
@@ -3758,7 +3758,7 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       cookie: 1.0.2
       react: 19.1.0
