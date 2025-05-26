@@ -22,7 +22,7 @@ importers:
         version: 16.11.0
       graphql-request:
         specifier: ^7.1.2
-        version: 7.1.2(graphql@16.11.0)
+        version: 7.2.0(graphql@16.11.0)
       react:
         specifier: ^19.0.0
         version: 19.1.0
@@ -1294,8 +1294,8 @@ packages:
     peerDependencies:
       graphql: 14 - 16
 
-  graphql-request@7.1.2:
-    resolution: {integrity: sha512-+XE3iuC55C2di5ZUrB4pjgwe+nIQBuXVIK9J98wrVwojzDW3GMdSBZfxUk8l4j9TieIpjpggclxhNEU9ebGF8w==}
+  graphql-request@7.2.0:
+    resolution: {integrity: sha512-0GR7eQHBFYz372u9lxS16cOtEekFlZYB2qOyq8wDvzRmdRSJ0mgUVX1tzNcIzk3G+4NY+mGtSz411wZdeDF/+A==}
     peerDependencies:
       graphql: 14 - 16
 
@@ -3413,7 +3413,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  graphql-request@7.1.2(graphql@16.11.0):
+  graphql-request@7.2.0(graphql@16.11.0):
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.11.0)
       graphql: 16.11.0
