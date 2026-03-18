@@ -41,7 +41,7 @@ jobs:
 
       - name: Restore direnv cache
         id: cache-direnv
-        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         with:
           path: /opt/pipx_bin/direnv
           key: ${{ runner.os }}-direnv-cache
@@ -53,7 +53,7 @@ jobs:
 
       - name: Save direnv cache
         if: steps.cache-direnv.outputs.cache-hit != 'true'
-        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache/save@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         with:
           path: /opt/pipx_bin/direnv
           key: ${{ runner.os }}-direnv-cache
