@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.9.23"
 spring-boot = "3.4.6"
-komapper = "4.0.0"
+komapper = "7.0.0"
 kotest = "5.9.1"
 testcontainers = "1.21.4"
 kolin-faker = "2.0.0-rc.9"
